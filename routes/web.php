@@ -1,5 +1,3 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-Route::view('', 'landing');
+// Routing handled by Folio
