@@ -9,7 +9,7 @@
     <flux:separator variant="subtle" class="my-6" />
 
 
-    <div class="max-w-prose prose-zinc prose-sm">
+    <x-prose>
 
         <flux:heading size="lg" level="2">Basic Build Commands</flux:heading>
 
@@ -32,35 +32,39 @@ phpacker build --src=./app.phar --php=8.3
 
         <flux:heading size="lg" level="2">Supported Platforms</flux:heading>
 
-        <flux:table>
-            <flux:table.columns>
-                <flux:table.column>Platform</flux:table.column>
-                <flux:table.column>Architectures</flux:table.column>
-                <flux:table.column>PHP Versions</flux:table.column>
-            </flux:table.columns>
+        <table class="min-w-full divide-y divide-gray-300">
+            <thead>
+                <tr>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900">Platform</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900">Architecture</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900">PHP Versions</th>
+                </tr>
+            </thead>
 
-            <flux:table.rows>
-                <flux:table.row>
-                    <flux:table.cell>macOS</flux:table.cell>
-                    <flux:table.cell>arm64, x64</flux:table.cell>
-                    <flux:table.cell>8.2, 8.3, 8.4</flux:table.cell>
-                </flux:table.row>
+            <tbody class="divide-y divide-gray-200">
 
-                <flux:table.row>
-                    <flux:table.cell>Linux</flux:table.cell>
-                    <flux:table.cell>arm64, x64</flux:table.cell>
-                    <flux:table.cell>8.2, 8.3, 8.4</flux:table.cell>
-                </flux:table.row>
+                <tr>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">macOS</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">arm64, x64</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">8.2, 8.3, 8.4</td>
+                </tr>
 
-                <flux:table.row>
-                    <flux:table.cell>Windows</flux:table.cell>
-                    <flux:table.cell>x64</flux:table.cell>
-                    <flux:table.cell>8.2, 8.3, 8.4</flux:table.cell>
-                </flux:table.row>
-            </flux:table.rows>
-        </flux:table>
+                <tr>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">Linux</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">arm64, x64</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">8.2, 8.3, 8.4</td>
+                </tr>
 
-    </div>
+                <tr>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">Windows</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">x64</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">8.2, 8.3, 8.4</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </x-prose>
 
 
 </x-layouts.docs>
