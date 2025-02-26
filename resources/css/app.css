@@ -15,4 +15,13 @@
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+
+    --color-eggshell-50: hsl(24 100% 99%);
+    --color-eggshell-100: hsl(30 100% 98%);
+    --color-eggshell-200: hsl(28.4 90.5% 95.9%);
+    --color-eggshell-300: hsl(29.1 94.3% 93.1%);
+    --color-eggshell-400: hsl(28.6 91.3% 91%);
+    --color-eggshell-500: hsl(28.8 92.9% 89%);
+    --color-eggshell-600: hsl(28.7 94.4% 86.1%);
+    --color-eggshell-700: hsl(29.2 93% 83.1%);
 }
