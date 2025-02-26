@@ -7,7 +7,7 @@
     <flux:separator variant="subtle" class="my-6" />
 
 
-    <div class="max-w-prose prose-zinc prose-sm">
+    <x-prose>
 
         <p>By using this method you'll be able to run the build command without providing any input:</p>
 
@@ -50,6 +50,6 @@
             <li>Interactive prompt if --ini is passed without a value</li>
         </ol>
 
-    </div>
+    </x-prose>
 
 </x-layouts.docs>

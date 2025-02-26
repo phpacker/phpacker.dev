@@ -7,7 +7,7 @@
     <flux:separator variant="subtle" class="my-6" />
 
 
-    <div class="max-w-prose prose-zinc prose-sm">
+    <x-prose>
 
         <flux:heading size="lg" level="2">Installation</flux:heading>
 
@@ -31,7 +31,7 @@
             phpacker build --src=./app.php
         </x-code>
 
-    </div>
+    </x-prose>
 
 
 </x-layouts.docs>

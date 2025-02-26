@@ -4,7 +4,7 @@
 
     <flux:separator variant="subtle" class="my-6" />
 
-    <div class="max-w-prose prose-zinc prose-sm">
+    <x-prose>
 
         <p>PHPacker automatically checks for binary updates during builds. Manual updates can be performed</p>
 
@@ -16,7 +16,7 @@ phpacker download
 phpacker download "your-org/php-bin"
         </x-code>
 
-    </div>
+    </x-prose>
 
 
 </x-layouts.docs>

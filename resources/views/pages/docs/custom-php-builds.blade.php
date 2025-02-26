@@ -7,7 +7,7 @@
     <flux:separator variant="subtle" class="my-6" />
 
 
-    <div class="max-w-prose prose-zinc prose-sm">
+    <x-prose>
 
         <p>
             To create a custom build:
@@ -38,7 +38,7 @@
 }
         </x-code>
 
-    </div>
+    </x-prose>
 
 
 </x-layouts.docs>

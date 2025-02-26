@@ -7,7 +7,7 @@
     <flux:separator variant="subtle" class="my-6" />
 
 
-    <div class="max-w-prose prose-zinc prose-sm">
+    <x-prose>
 
         <flux:heading size="lg" level="2">Single PHP Script Limitations</flux:heading>
 
@@ -37,7 +37,7 @@ define('APP_DATA', match (PHP_OS_FAMILY) {
             <li>Windows: %LOCALAPPDATA%\my-app</li>
             <li>Linux: ~/.my-app</li>
         </ul>
-    </div>
+    </x-prose>
 
 
 </x-layouts.docs>
