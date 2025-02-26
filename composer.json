@@ -14,7 +14,8 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
-        "livewire/flux-pro": "^2.0"
+        "livewire/flux-pro": "^2.0",
+        "torchlight/torchlight-laravel": "dev-l12-compatibility"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -79,6 +80,10 @@
         "flux-pro": {
             "type": "composer",
             "url": "https://composer.fluxui.dev"
+        },
+        "torchlight": {
+            "type": "vcs",
+            "url": "https://github.com/laravel-shift/torchlight-laravel.git"
         }
     }
 }

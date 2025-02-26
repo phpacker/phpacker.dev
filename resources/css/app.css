@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@import "./torchlight";
+
+/* Plugins */
+@plugin "@tailwindcss/typography";
+
 /* Flux */
 @import "../../vendor/livewire/flux/dist/flux.css";
 @custom-variant dark (&:where(.dark, .dark *));
