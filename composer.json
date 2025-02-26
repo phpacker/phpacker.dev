@@ -62,6 +62,12 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "scripts": {
+            "format": [
+                "vendor/bin/pint",
+                "node_modules/.bin/prettier"
+            ]
         }
     },
     "config": {
