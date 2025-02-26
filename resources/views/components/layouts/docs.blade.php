@@ -18,12 +18,12 @@
         <flux:input as="button" variant="filled" placeholder="Search..." icon="magnifying-glass" />
 
         <flux:navlist variant="outline" class="lg:gap-y-1">
-            <flux:navlist.item href="#" current>Installation</flux:navlist.item>
-            <flux:navlist.item href="#">Getting Started</flux:navlist.item>
-            <flux:navlist.item href="#">Configuration</flux:navlist.item>
-            <flux:navlist.item href="#">Custom PHP Builds</flux:navlist.item>
-            <flux:navlist.item href="#">Updating PHP Binaries</flux:navlist.item>
-            <flux:navlist.item href="#">App Considerations</flux:navlist.item>
+            <flux:navlist.item href="/docs/installation">Installation</flux:navlist.item>
+            <flux:navlist.item href="/docs/getting-started">Getting Started</flux:navlist.item>
+            <flux:navlist.item href="/docs/configuration">Configuration</flux:navlist.item>
+            <flux:navlist.item href="/docs/custom-php-builds">Custom PHP Builds</flux:navlist.item>
+            <flux:navlist.item href="/docs/updating-php-binaries">Updating PHP Binaries</flux:navlist.item>
+            <flux:navlist.item href="/docs/app-considerations">App Considerations</flux:navlist.item>
         </flux:navlist>
 
         <flux:spacer />
