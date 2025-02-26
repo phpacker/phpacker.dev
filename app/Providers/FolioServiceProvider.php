@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Laravel\Folio\Folio;
+use Illuminate\Support\ServiceProvider;
 
 class FolioServiceProvider extends ServiceProvider
 {
