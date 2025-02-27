@@ -3,7 +3,7 @@
  overflow-x-auto is recommended.
 */
 pre {
-    @apply my-4 rounded overflow-x-auto;
+    @apply my-4 overflow-x-auto rounded;
 }
 
 /*
@@ -13,7 +13,7 @@ pre {
  colors extend edge to edge.
 */
 pre code.torchlight {
-    @apply block py-4 min-w-max;
+    @apply block min-w-max py-4;
 }
 
 /*

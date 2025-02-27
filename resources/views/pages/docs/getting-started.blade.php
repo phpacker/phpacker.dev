@@ -1,21 +1,37 @@
 <x-layouts.docs title="Getting Started - phpacker">
+    <flux:heading
+        size="xl"
+        level="1"
+    >
+        Getting Started
+    </flux:heading>
 
-    <flux:heading size="xl" level="1">Getting Started</flux:heading>
-
-    <flux:subheading size="lg" class="max-w-prose">
-        All configuration options can be passed as command arguments. For a version-tracked way to do this, check out the <a href="/docs/configuration">config</a> section to track all options in a config file.
+    <flux:subheading
+        size="lg"
+        class="max-w-prose"
+    >
+        All configuration options can be passed as command arguments. For a version-tracked way to do this, check out the
+        <a href="/docs/configuration">config</a>
+        section to track all options in a config file.
     </flux:subheading>
 
-    <flux:separator variant="subtle" class="my-6" />
-
+    <flux:separator
+        variant="subtle"
+        class="my-6"
+    />
 
     <x-prose>
-
-        <flux:heading size="lg" level="2">Basic Build Commands</flux:heading>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            Basic Build Commands
+        </flux:heading>
 
         <p>When you don't provide any input you'll be prompted through setting the basics. You may also pass these as arguments to the build command.</p>
 
-        <x-code language='shell'>
+        <!-- prettier-ignore -->
+        <x-code language="shell" >
 # Build for specific platform and architecture
 phpacker build mac arm --src=./app.phar
 
@@ -29,42 +45,56 @@ phpacker build --src=./app.phar --dest=./custom-build-path
 phpacker build --src=./app.phar --php=8.3
         </x-code>
 
-
-        <flux:heading size="lg" level="2">Supported Platforms</flux:heading>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            Supported Platforms
+        </flux:heading>
 
         <table class="min-w-full divide-y divide-gray-300">
             <thead>
                 <tr>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900">Platform</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900">Architecture</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900">PHP Versions</th>
+                    <th
+                        scope="col"
+                        class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900"
+                    >
+                        Platform
+                    </th>
+                    <th
+                        scope="col"
+                        class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900"
+                    >
+                        Architecture
+                    </th>
+                    <th
+                        scope="col"
+                        class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900"
+                    >
+                        PHP Versions
+                    </th>
                 </tr>
             </thead>
 
             <tbody class="divide-y divide-gray-200">
-
                 <tr>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">macOS</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">arm64, x64</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">macOS</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">arm64, x64</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">8.2, 8.3, 8.4</td>
                 </tr>
 
                 <tr>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">Linux</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">arm64, x64</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">Linux</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">arm64, x64</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">8.2, 8.3, 8.4</td>
                 </tr>
 
                 <tr>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">Windows</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">x64</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-zinc-500">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">Windows</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">x64</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">8.2, 8.3, 8.4</td>
                 </tr>
-
             </tbody>
         </table>
-
     </x-prose>
-
-
 </x-layouts.docs>

@@ -1,25 +1,39 @@
 <x-layouts.docs title="Installation - phpacker">
+    <flux:heading
+        size="xl"
+        level="1"
+    >
+        Configuration
+    </flux:heading>
 
-    <flux:heading size="xl" level="1">Configuration</flux:heading>
+    <flux:subheading
+        size="lg"
+        class="max-w-prose"
+    >
+        Using a config file you are able to predefine any argument or option otherwise passed to the build command. This way you can have all parameters for your project in a single version tracked file.
+    </flux:subheading>
 
-    <flux:subheading size="lg" class="max-w-prose">Using a config file you are able to predefine any argument or option otherwise passed to the build command. This way you can have all parameters for your project in a single version tracked file.</flux:subheading>
-
-    <flux:separator variant="subtle" class="my-6" />
-
+    <flux:separator
+        variant="subtle"
+        class="my-6"
+    />
 
     <x-prose>
-
         <p>By using this method you'll be able to run the build command without providing any input:</p>
 
-        <x-code language='shell'>
-            phpacker build
-        </x-code>
+        <x-code language="shell">phpacker build</x-code>
 
-        <flux:heading size="lg" level="2">JSON Configuration (phpacker.json)</flux:heading>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            JSON Configuration (phpacker.json)
+        </flux:heading>
 
         <p>Place a phpacker.json file in your project root to define build settings:</p>
 
-        <x-code language='json'>
+        <!-- prettier-ignore -->
+        <x-code language="json" >
 {
     "src": "./bin/app.phar",
     "dest": "./build",
@@ -38,7 +52,12 @@
             <li>phpacker.json in the current working directory</li>
         </ol>
 
-        <flux:heading size="lg" level="2">PHP INI Configuration</flux:heading>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            PHP INI Configuration
+        </flux:heading>
 
         <p>Similarly PHPacker will look for ini configuration in the following order:</p>
 
@@ -49,7 +68,5 @@
             <li>phpacker.ini in the current working directory</li>
             <li>Interactive prompt if --ini is passed without a value</li>
         </ol>
-
     </x-prose>
-
 </x-layouts.docs>
