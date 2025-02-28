@@ -23,7 +23,7 @@
             size="lg"
             level="2"
         >
-            Installation
+            Installation Options
         </flux:heading>
 
         <p>You can install PHPacker globally via Composer:</p>

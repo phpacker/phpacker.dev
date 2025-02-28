@@ -68,5 +68,48 @@ define('APP_DATA', match (PHP_OS_FAMILY) {
             <li>Windows: %LOCALAPPDATA%\my-app</li>
             <li>Linux: ~/.my-app</li>
         </ul>
+
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            Additional Application Considerations
+        </flux:heading>
+
+        <ul class="list-disc">
+            <li>
+                <strong>Environment variables</strong>
+                : Access environment variables using the standard
+                <code>getenv()</code>
+                function or $_ENV superglobal
+            </li>
+            <li>
+                <strong>Temporary files</strong>
+                : Use
+                <code>sys_get_temp_dir()</code>
+                to get the system's temporary directory for temporary file operations
+            </li>
+            <li>
+                <strong>Command line arguments</strong>
+                : Use a library for robust CLI argument handling. Like
+                <a
+                    href="https://symfony.com/doc/current/components/console.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    symfony/console
+                </a>
+                ,
+                <a
+                    href="https://laravel-zero.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    laravel-zero
+                </a>
+                or
+                <a href="https://laravel-zero.com/">minicli</a>
+            </li>
+        </ul>
     </x-prose>
 </x-layouts.docs>

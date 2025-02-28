@@ -68,5 +68,25 @@
             <li>phpacker.ini in the current working directory</li>
             <li>Interactive prompt if --ini is passed without a value</li>
         </ol>
+
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            Example INI File
+        </flux:heading>
+
+        <p>Here's an example of a basic PHP INI configuration:</p>
+
+        <!-- prettier-ignore -->
+        <x-code language="ini" >
+; Memory settings
+memory_limit = 256M
+
+; Error handling
+display_errors = Off
+log_errors = On
+error_log = stderr
+        </x-code>
     </x-prose>
 </x-layouts.docs>

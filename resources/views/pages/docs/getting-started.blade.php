@@ -41,8 +41,28 @@ phpacker build all --src=./app.phar
 # Build with custom output directory
 phpacker build --src=./app.phar --dest=./custom-build-path
 
+# Build with a specific PHP configuration file
+phpacker build --src=./app.phar --ini=./custom-php.ini
+
+# Prompt INI definitions interactively
+phpacker build --src=./app.phar --ini
+
 # Build with with php version
 phpacker build --src=./app.phar --php=8.3
+        </x-code>
+
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            Build Output
+        </flux:heading>
+
+        <p>The default build process creates executables within the build directory with the following naming pattern:</p>
+
+        <!-- prettier-ignore -->
+        <x-code language="text" >
+            {dest}/{platform}/{platform}-{architecture}[.exe]
         </x-code>
 
         <flux:heading
