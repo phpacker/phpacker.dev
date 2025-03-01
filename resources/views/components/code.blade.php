@@ -3,7 +3,7 @@
 {{ $slot }}
     </x-torchlight-code></pre>
 
-    <pre class="hidden group-[.dark]/html:block"><x-torchlight-code {{ $attributes->class('text-sm select-all') }} theme="atom-one-dark" >
+    <pre class="hidden group-[.dark]/html:block"><x-torchlight-code {{ $attributes->class('text-sm select-all') }} theme="winter-is-coming-blue" >
 {{ $slot }}
     </x-torchlight-code></pre>
 </div>

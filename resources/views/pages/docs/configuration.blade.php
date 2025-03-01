@@ -47,9 +47,20 @@
         <p>PHPacker will look for a config file in the following order:</p>
 
         <ol class="list-decimal">
-            <li>Custom path specified via --config=path/to/file.json</li>
-            <li>phpacker.json in the source directory via --src option</li>
-            <li>phpacker.json in the current working directory</li>
+            <li>
+                Custom path specified via
+                <code>--config=path/to/file.json</code>
+            </li>
+            <li>
+                <code>phpacker.json</code>
+                in the source directory via
+                <code>--src</code>
+                option
+            </li>
+            <li>
+                <code>phpacker.json</code>
+                in the current working directory
+            </li>
         </ol>
 
         <flux:heading
@@ -62,11 +73,26 @@
         <p>Similarly PHPacker will look for ini configuration in the following order:</p>
 
         <ol class="list-decimal">
-            <li>Custom path specified via --ini=path/to/file.ini</li>
+            <li>
+                Custom path specified via
+                <code>--ini=path/to/file.ini</code>
+            </li>
             <li>Path specified in used config file</li>
-            <li>phpacker.ini in the source directory via --src option</li>
-            <li>phpacker.ini in the current working directory</li>
-            <li>Interactive prompt if --ini is passed without a value</li>
+            <li>
+                <code>phpacker.ini</code>
+                in the source directory via
+                <code>--src</code>
+                option
+            </li>
+            <li>
+                <code>phpacker.ini</code>
+                in the current working directory
+            </li>
+            <li>
+                Interactive prompt if
+                <code>--ini</code>
+                is passed without a value
+            </li>
         </ol>
 
         <flux:heading

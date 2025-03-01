@@ -67,4 +67,10 @@
             />
         </x-slot>
     </flux:button>
+
+    <flux:spacer />
+
+    <div class="mr-2 lg:hidden">
+        <x-darkmode />
+    </div>
 </div>

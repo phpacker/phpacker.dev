@@ -72,47 +72,47 @@ phpacker build --src=./app.phar --php=8.3
             Supported Platforms
         </flux:heading>
 
-        <table class="min-w-full divide-y divide-gray-300">
+        <table class="min-w-full divide-y divide-zinc-300">
             <thead>
                 <tr>
                     <th
                         scope="col"
-                        class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900"
+                        class="px-3 py-3.5 text-left text-sm font-semibold"
                     >
                         Platform
                     </th>
                     <th
                         scope="col"
-                        class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900"
+                        class="px-3 py-3.5 text-left text-sm font-semibold"
                     >
                         Architecture
                     </th>
                     <th
                         scope="col"
-                        class="px-3 py-3.5 text-left text-sm font-semibold text-zinc-900"
+                        class="px-3 py-3.5 text-left text-sm font-semibold"
                     >
                         PHP Versions
                     </th>
                 </tr>
             </thead>
 
-            <tbody class="divide-y divide-gray-200">
+            <tbody class="divide-y divide-zinc-300 text-zinc-500 dark:text-zinc-200">
                 <tr>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">macOS</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">arm64, x64</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">macOS</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">arm64, x64</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4</td>
                 </tr>
 
                 <tr>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">Linux</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">arm64, x64</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">Linux</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">arm64, x64</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4</td>
                 </tr>
 
                 <tr>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">Windows</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">x64</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap text-zinc-500">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">Windows</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">x64</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4</td>
                 </tr>
             </tbody>
         </table>

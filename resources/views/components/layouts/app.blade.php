@@ -33,9 +33,10 @@
     </head>
 
     <body class="min-h-screen bg-white dark:bg-zinc-800">
-        <div class="absolute top-2 right-2">
+        <div class="fixed top-4 right-4 hidden lg:block">
             <x-darkmode />
         </div>
+
         {{ $slot }}
 
         @fluxScripts
