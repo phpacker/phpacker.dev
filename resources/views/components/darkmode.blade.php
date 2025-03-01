@@ -1,21 +1,22 @@
 <button
     x-data
+    x-cloak
     x-title="darkmode-toggle"
     x-on:click="$flux.dark = ! $flux.dark"
     :aria-checked="$flux.dark"
     :class="$flux.dark ? 'bg-zinc-400' : 'bg-zinc-300'"
-    class="relative inline-flex w-11 rounded-full py-1 transition"
     :aria-label="$flux.dark ? 'Disable darkmode' : 'Enable darmode'"
+    class="relative inline-flex w-11 rounded-full py-1 transition"
     type="button"
     role="switch"
 >
     {{-- heroicon-m-sun --}}
     <svg
-        x-show="!$flux.dark"
+        x-show="$flux.dark"
         x-transition
-        class="absolute left-1.5 h-4 w-4 text-zinc-500"
-        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute left-1 h-4 w-4 text-zinc-600"
         fill="currentColor"
     >
         <path
@@ -25,11 +26,11 @@
 
     {{-- heroicon-m-moon --}}
     <svg
-        x-show="$flux.dark"
+        x-show="!$flux.dark"
         x-transition
-        class="absolute right-1 h-4 w-4 text-zinc-300"
-        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute right-1 h-4 w-4 text-zinc-400"
         fill="currentColor"
     >
         <path
@@ -41,7 +42,7 @@
 
     {{-- toggle indicator --}}
     <span
-        :class="$flux.dark ? 'translate-x-1' : 'translate-x-6'"
+        :class="$flux.dark ? 'translate-x-6' : 'translate-x-1'"
         class="h-4 w-4 rounded-full bg-white shadow-md transition"
         aria-hidden="true"
     ></span>

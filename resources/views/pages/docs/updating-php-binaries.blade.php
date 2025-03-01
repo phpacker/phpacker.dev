@@ -1,4 +1,4 @@
-<x-layouts.docs title="Custom PHP Builds - phpacker">
+<x-layouts.docs title="Updating PHP Binaries - phpacker">
     <flux:heading
         size="xl"
         level="1"
