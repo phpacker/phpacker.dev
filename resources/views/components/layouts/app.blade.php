@@ -25,9 +25,14 @@
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        @fluxAppearance
     </head>
 
-    <body class="min-h-screen bg-white">
+    <body class="min-h-screen bg-white dark:bg-zinc-800">
+        <div class="absolute top-2 right-2">
+            <x-darkmode />
+        </div>
         {{ $slot }}
 
         @fluxScripts
