@@ -55,8 +55,57 @@
         </div>
 
 
-        <div class="mb-10 mt-60 p-6 rounded-lg bg-slate-100">
-            fooo
+        <div class="flex mb-10 mt-60 justify-center">
+
+            <div class="p-6 rounded-lg bg-slate-100 dark:bg-white max-w-6xl text-slate-700">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-20 mx-24 my-14">
+
+                    <!-- Feature 1 -->
+                    <div>
+                        <h3 class="font-semibold leading-7">Cross-Platform Support</h3>
+                        <p>Build executables for macOS, Linux, and Windows from a single codebase - deploy anywhere without platform-specific adjustments.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div>
+                        <h3 class="font-semibold leading-7">Self-Contained Deployments</h3>
+                        <p>Distribute your application as a single file - PHP is bundled with your application, eliminating compatibility issues.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div>
+                        <h3 class="font-semibold leading-7">Project Configuration</h3>
+                        <p>Store build settings in version-controlled files - ensure consistent builds across teams and CI/CD pipelines.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div>
+                        <h3 class="font-semibold leading-7">Multiple PHP Versions</h3>
+                        <p>Choose from PHP 8.2, 8.3, or 8.4 to match your application's requirements or take advantage of latest features.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div>
+                        <h3 class="font-semibold leading-7">Automated Updates</h3>
+                        <p>Keep your PHP runtime binaries up-to-date with a simple command - always build with the latest improvements.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div>
+                        <h3 class="font-semibold leading-7">Custom PHP Runtimes</h3>
+                        <p>Use your own custom-built PHP binaries with specific extensions by pointing to your forked repository.</p>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
         </div>
 
     </flux:main>
