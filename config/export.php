@@ -34,6 +34,7 @@ return [
      */
     'include_files' => [
         'public' => '',
+        'vendor/livewire/flux/dist/flux.min.js' => 'flux/flux.js',
     ],
 
     /*

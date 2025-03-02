@@ -61,7 +61,7 @@
         ],
         "build": [
             "npm run build",
-            "php artisan export"
+            "APP_ENV=production php artisan export"
         ],
         "format": [
             "vendor/bin/pint",

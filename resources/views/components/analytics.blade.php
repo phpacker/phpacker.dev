@@ -1,15 +1,17 @@
-<!-- Google tag (gtag.js) -->
-<script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-JFMSV5BL43"
-></script>
+@env('production')
+    <!-- Google tag (gtag.js) -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-JFMSV5BL43"
+    ></script>
 
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'G-JFMSV5BL43');
-</script>
+        gtag('config', 'G-JFMSV5BL43');
+    </script>
+@endenv
