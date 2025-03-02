@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html
     lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-    class="group/html"
+    class="group/html scroll-smooth"
 >
     <head>
         <x-analytics />

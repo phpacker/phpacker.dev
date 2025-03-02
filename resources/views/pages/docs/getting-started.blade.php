@@ -72,7 +72,7 @@ phpacker build --src=./app.phar --php=8.3
             Supported Platforms
         </flux:heading>
 
-        <table class="min-w-full divide-y divide-zinc-300">
+        <table class="min-w-full divide-y divide-zinc-300 dark:divide-zinc-500">
             <thead>
                 <tr>
                     <th
@@ -96,7 +96,7 @@ phpacker build --src=./app.phar --php=8.3
                 </tr>
             </thead>
 
-            <tbody class="divide-y divide-zinc-300 text-zinc-500 dark:text-zinc-200">
+            <tbody class="divide-y divide-zinc-300 text-zinc-500 dark:divide-zinc-500 dark:text-zinc-200">
                 <tr>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">macOS</td>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">arm64, x64</td>

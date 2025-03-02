@@ -4,7 +4,7 @@
     x-title="darkmode-toggle"
     x-on:click="$flux.dark = ! $flux.dark"
     :aria-checked="$flux.dark"
-    :class="$flux.dark ? 'bg-zinc-400' : 'bg-zinc-300'"
+    :class="$flux.dark ? 'bg-zinc-600' : 'bg-zinc-300'"
     :aria-label="$flux.dark ? 'Disable darkmode' : 'Enable darmode'"
     class="relative inline-flex w-11 rounded-full py-1 transition"
     type="button"
@@ -16,7 +16,7 @@
         x-transition
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
-        class="absolute left-1 h-4 w-4 text-zinc-600"
+        class="absolute left-1 h-4 w-4 text-zinc-300"
         fill="currentColor"
     >
         <path
