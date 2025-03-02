@@ -50,6 +50,18 @@
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <!-- Alpine Plugins -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+        ></script>
+
+        <!-- Alpine Core -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+        ></script>
+
         @fluxAppearance
     </head>
 

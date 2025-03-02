@@ -28,15 +28,19 @@
 
         <div id="in-action" class="flex items-center justify-center">
             <div x-data="{
-                    src: '#',
-                    played: false,
-                    function play() {
+                    src: null,
+                    play() {
                         const gif = '/cli-demo.gif'
-                        this.src = gif + 't=' + Math.floor(Date.now() / 1000)
-                        this.played = true
+                        this.src = gif + '?t=' + Math.floor(Date.now() / 1000)
+                        this.playing = true
                     }
                 }"
-                class="relative bg-slate-900 w-lg max-w-full flex-col sm:w-xl rounded-lg"
+                x-intersect.enter.half.once="play()"
+                x-title="phpacker-demo"
+                class="relative bg-[#0C182D] w-lg max-w-full flex-col sm:w-xl rounded-lg overflow-hidden"
+                :class="{
+                    'aspect-[1.10161225544]': !this.src //
+                }"
             >
                 <div class="flex space-x-1.5 py-2 px-1.5">
                     <div class="rounded-full size-3 bg-red-500 opacity-80"></div>
@@ -44,7 +48,7 @@
                     <div class="rounded-full size-3 bg-green-500 opacity-80"></div>
                 </div>
 
-                <img :src="src" alt="PHPacker demo" class="w-full">
+                <img x-show="src" :src="src" alt="PHPacker demo" class="w-full">
 
                 <div class="absolute right-3 bottom-3">
                     <flux:button x-on:click="play()" icon="play" size="xs" variant="subtle" />
