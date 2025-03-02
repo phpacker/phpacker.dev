@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div id="in-action" class="flex items-center justify-center">
+        <div id="in-action" class="pt-10 flex items-center justify-center">
             <div x-data="{
                     src: null,
                     play() {
@@ -35,12 +35,10 @@
                         this.playing = true
                     }
                 }"
+                x-init="play()"
                 x-intersect.enter.half.once="play()"
                 x-title="phpacker-demo"
-                class="relative bg-[#0C182D] w-lg max-w-full flex-col sm:w-xl rounded-lg overflow-hidden"
-                :class="{
-                    'aspect-[1.10161225544]': !this.src //
-                }"
+                class="relative bg-[#0C182D] max-w-full flex-col w-3xl rounded-lg overflow-hidden"
             >
                 <div class="flex space-x-1.5 py-2 px-1.5">
                     <div class="rounded-full size-3 bg-red-500 opacity-80"></div>
@@ -48,12 +46,17 @@
                     <div class="rounded-full size-3 bg-green-500 opacity-80"></div>
                 </div>
 
-                <img x-show="src" :src="src" alt="PHPacker demo" class="w-full">
+                <img x-show="src" :src="src" alt="PHPacker demo" class="w-[522px] max-w-full">
 
                 <div class="absolute right-3 bottom-3">
                     <flux:button x-on:click="play()" icon="play" size="xs" variant="subtle" />
                 </div>
             </div>
+        </div>
+
+
+        <div class="mb-10 mt-60 p-6 rounded-lg bg-slate-100">
+            fooo
         </div>
 
     </flux:main>
