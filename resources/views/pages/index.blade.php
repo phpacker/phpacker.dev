@@ -1,6 +1,6 @@
 <x-layouts.app
     title="phpacker"
-    class="dark:bg-gradient-to-b dark:from-zinc-900"
+    class="dark:bg-gradient-to-b dark:from-zinc-900 dark:to-zinc-700"
 >
     <flux:main>
         {{-- Hero --}}
@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <div class="mt-60 mb-10 flex justify-center">
+        <div class="mt-20 mb-10 flex justify-center md:mt-60">
             <div class="max-w-6xl rounded-xl bg-slate-100 px-6 py-20 text-slate-700 dark:bg-white">
                 <!-- Intro -->
                 <div class="mt-6 flex flex-col items-center justify-center space-y-10 md:mx-24">
@@ -97,9 +97,9 @@
                 <!-- Grid -->
                 <div class="grid grid-cols-1 gap-x-0 gap-y-12 pr-6 sm:gap-x-5 md:grid-cols-2 md:gap-x-20 md:pr-0 lg:mx-24">
                     <!-- Feature 1 -->
-                    <div class="flex space-x-6">
+                    <div class="flex space-x-5 sm:space-x-6">
                         <div>
-                            <x-svg.logo class="size-10" />
+                            <x-svg.logo class="size-6 sm:size-10" />
                         </div>
 
                         <div>
@@ -109,9 +109,9 @@
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="flex space-x-5">
+                    <div class="flex space-x-4 sm:space-x-5">
                         <div>
-                            <x-svg.pitch.cpu class="text-brand size-11" />
+                            <x-svg.pitch.cpu class="text-brand size-7 sm:size-11" />
                         </div>
 
                         <div>
@@ -121,9 +121,9 @@
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="flex space-x-6">
+                    <div class="flex space-x-5 sm:space-x-6">
                         <div>
-                            <x-svg.pitch.brackets class="text-brand size-10" />
+                            <x-svg.pitch.brackets class="text-brand size-6 sm:size-10" />
                         </div>
 
                         <div>
@@ -133,9 +133,9 @@
                     </div>
 
                     <!-- Feature 4 -->
-                    <div class="flex space-x-5">
+                    <div class="flex space-x-4 sm:space-x-5">
                         <div>
-                            <x-svg.pitch.php class="text-brand size-11" />
+                            <x-svg.pitch.php class="text-brand size-7 sm:size-11" />
                         </div>
 
                         <div>
@@ -145,9 +145,9 @@
                     </div>
 
                     <!-- Feature 5 -->
-                    <div class="flex space-x-6">
+                    <div class="flex space-x-5 sm:space-x-6">
                         <div>
-                            <x-svg.pitch.update class="text-brand size-10" />
+                            <x-svg.pitch.update class="text-brand size-6 sm:size-10" />
                         </div>
 
                         <div>
@@ -157,9 +157,9 @@
                     </div>
 
                     <!-- Feature 6 -->
-                    <div class="flex space-x-6">
+                    <div class="flex space-x-5 sm:space-x-6">
                         <div>
-                            <x-svg.pitch.binary class="text-brand size-10" />
+                            <x-svg.pitch.binary class="text-brand size-6 sm:size-10" />
                         </div>
 
                         <div>
