@@ -10,6 +10,7 @@
                     <x-svg.logo class="size-7 sm:size-14 mr-1 -translate-y-0.5 inline" />
                     Self-contained <br> PHP executables
                 </h1>
+
                 <h2 class="text-center text-xl font-extrabold tracking-wide sm:text-4xl">build once, run anywhere</h2>
 
                 <div class="flex mt-16 justify-center space-x-4">
@@ -60,11 +61,15 @@
             <div class="px-6 py-20 rounded-xl bg-slate-100 dark:bg-white max-w-6xl text-slate-700">
 
                 <!-- Intro -->
-                <div class="mt-6 md:mx-24">
+                <div class="mt-6 md:mx-24 space-y-10">
 
-                    <h2>
-                        PHPacker enables you to package any PHP script or PHAR into a standalone, cross-platform executable. It handles all the complexity of bundling PHP runtime with your application, making distribution simple and hassle-free.
+                    <h2 class="text-3xl text-center">
+                        Package PHP Apps Without the Hassle
                     </h2>
+
+                    <p class="text-lg text-center">
+                        PHPacker enables you to package any PHP script or PHAR into a standalone, cross-platform executable. It handles all the complexity of bundling PHP with your application, making distribution simple and hassle-free.
+                    </p>
 
                 </div>
 
@@ -149,6 +154,13 @@
                 </div>
             </div>
 
+        </div>
+
+
+        <div class="text-center mt-36 mb-12 text-sm tracking-wide group">
+            <a href="http://leuver.ink" target="_blank" rel="noopener noreferrer">
+                Made with <x-svg.heart class="inline size-5 mx-0.5 group-hover:text-brand" /> for the PHP community by <strong class="group-hover:text-brand">Willem Leuverink</strong>
+            </a>
         </div>
 
     </flux:main>

@@ -1,6 +1,6 @@
 <div class="flex">
     <flux:brand
-        href="/docs/installation"
+        href="/"
         logo="https://fluxui.dev/img/demo/logo.png"
         name="phpacker"
         class="!gap-1.5 px-2 tracking-wider uppercase"
