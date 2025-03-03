@@ -57,50 +57,93 @@
 
         <div class="flex mb-10 mt-60 justify-center">
 
-            <div class="p-6 rounded-lg bg-slate-100 dark:bg-white max-w-6xl text-slate-700">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-20 mx-24 my-14">
+            <div class="px-6 py-20 rounded-xl bg-slate-100 dark:bg-white max-w-6xl text-slate-700">
+
+                <!-- Intro -->
+                <div class="mt-6 md:mx-24">
+
+                    <h2>
+                        PHPacker enables you to package any PHP script or PHAR into a standalone, cross-platform executable. It handles all the complexity of bundling PHP runtime with your application, making distribution simple and hassle-free.
+                    </h2>
+
+                </div>
+
+                <hr class="my-24 mx-8 md:mx-20 text-slate-300 dark:text-slate-200" />
+
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-0 sm:gap-x-5 md:gap-x-20 lg:mx-24">
 
                     <!-- Feature 1 -->
-                    <div>
-                        <h3 class="font-semibold leading-7">Cross-Platform Support</h3>
-                        <p>Build executables for macOS, Linux, and Windows from a single codebase - deploy anywhere without platform-specific adjustments.</p>
+                    <div class="flex space-x-6">
+                        <div>
+                            <x-svg.logo class="size-10" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-2">Self-Contained Executables</h3>
+                            <p>Distribute your CLI app as a single file - PHP is bundled with your application, eliminating compatibility issues.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div>
-                        <h3 class="font-semibold leading-7">Self-Contained Deployments</h3>
-                        <p>Distribute your application as a single file - PHP is bundled with your application, eliminating compatibility issues.</p>
+                    <div class="flex space-x-5">
+                        <div>
+                            <x-svg.pitch.cpu class="size-11 text-brand" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-2">Cross-Platform Support</h3>
+                            <p>Build executables for macOS, Linux, and Windows from a single codebase - deploy anywhere without platform-specific adjustments.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div>
-                        <h3 class="font-semibold leading-7">Project Configuration</h3>
-                        <p>Store build settings in version-controlled files - ensure consistent builds across teams and CI/CD pipelines.</p>
+                    <div class="flex space-x-6">
+                        <div>
+                            <x-svg.pitch.brackets class="size-10 text-brand" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-2">Project Configuration</h3>
+                            <p>Store build and INI settings in version-controlled files - ensure consistent builds across teams and CI/CD pipelines.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 4 -->
-                    <div>
-                        <h3 class="font-semibold leading-7">Multiple PHP Versions</h3>
-                        <p>Choose from PHP 8.2, 8.3, or 8.4 to match your application's requirements or take advantage of latest features.</p>
+                    <div class="flex space-x-5">
+                        <div>
+                            <x-svg.pitch.php class="size-11 text-brand" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-2">Multiple PHP Versions</h3>
+                            <p>Choose from PHP 8.2, 8.3, or 8.4 to match your application's requirements or take advantage of latest features.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 5 -->
-                    <div>
-                        <h3 class="font-semibold leading-7">Automated Updates</h3>
-                        <p>Keep your PHP runtime binaries up-to-date with a simple command - always build with the latest improvements.</p>
+                    <div class="flex space-x-6">
+                        <div>
+                            <x-svg.pitch.update class="size-10 text-brand" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-2">Automated Updates</h3>
+                            <p>Keep your PHP runtime binaries up-to-date with a simple command - always build with the latest improvements.</p>
+                        </div>
                     </div>
 
                     <!-- Feature 6 -->
-                    <div>
-                        <h3 class="font-semibold leading-7">Custom PHP Runtimes</h3>
-                        <p>Use your own custom-built PHP binaries with specific extensions by pointing to your forked repository.</p>
+                    <div class="flex space-x-6">
+                        <div>
+                            <x-svg.pitch.binary class="size-10 text-brand" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-2">Custom PHP Binaries</h3>
+                            <p>Use your own custom-built PHP binaries with specific extensions by pointing to your forked repository.</p>
+                        </div>
                     </div>
-
-
-
-
-
-
 
 
                 </div>
