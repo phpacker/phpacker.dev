@@ -5,36 +5,38 @@
     <flux:main>
         {{-- Hero --}}
         <div class="flex h-screen items-center justify-center">
-            <div class="flex w-lg max-w-full flex-col sm:w-xl">
-                <h1 class="mb-6 text-center text-3xl leading-snug font-extrabold tracking-wide sm:text-6xl">
-                    <x-svg.logo class="mr-1 inline size-7 -translate-y-0.5 sm:size-14" />
-                    Self-contained
-                    <br />
-                    PHP executables
-                </h1>
+            <div class="flex">
+                <div class="flex w-lg max-w-full flex-col sm:w-xl">
+                    <h1 class="mb-6 text-center text-3xl leading-snug font-extrabold tracking-wide sm:text-6xl">
+                        <x-svg.logo class="mr-1 inline size-7 -translate-y-0.5 sm:size-14" />
+                        Self-contained
+                        <br />
+                        PHP executables
+                    </h1>
 
-                <h2 class="text-center text-xl font-extrabold tracking-wide sm:text-4xl">build once, run anywhere</h2>
+                    <h2 class="text-center text-xl font-extrabold tracking-wide sm:text-4xl">build once, run anywhere</h2>
 
-                <div class="mt-16 flex justify-center space-x-4">
-                    <flux:button
-                        icon="arrow-down-tray"
-                        href="/docs/installation"
-                    >
-                        Get PHPacker now!
-                    </flux:button>
+                    <div class="mt-16 flex flex-col items-center justify-center space-y-3 space-x-4 sm:flex-row sm:space-y-0">
+                        <flux:button
+                            icon="arrow-down-tray"
+                            href="/docs/installation"
+                        >
+                            Get PHPacker now!
+                        </flux:button>
 
-                    <flux:button
-                        href="#in-action"
-                        icon-trailing="arrow-down"
-                        variant="ghost"
-                    >
-                        See it in action
-                    </flux:button>
+                        <flux:button
+                            href="#in-action"
+                            icon-trailing="arrow-down"
+                            variant="ghost"
+                        >
+                            See it in action
+                        </flux:button>
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <x-svg.wiggly-arrow class="text-brand h-64 translate-x-8 sm:h-80" />
+                <div class="hidden sm:block">
+                    <x-svg.wiggly-arrow class="text-brand sm:mr4 ml-4 h-64 sm:h-80" />
+                </div>
             </div>
         </div>
 
@@ -90,10 +92,10 @@
                     <p class="max-w-2xl text-center text-lg">PHPacker enables you to package any PHP script or PHAR into a standalone, cross-platform executable. It handles all the complexity of bundling PHP with your application, making distribution simple and hassle-free.</p>
                 </div>
 
-                <hr class="mx-8 my-24 text-slate-300 md:mx-20 dark:text-slate-200" />
+                <hr class="mx-8 my-14 text-slate-300 md:mx-20 md:my-24 dark:text-slate-200" />
 
                 <!-- Grid -->
-                <div class="grid grid-cols-1 gap-x-0 gap-y-12 sm:gap-x-5 md:grid-cols-2 md:gap-x-20 lg:mx-24">
+                <div class="grid grid-cols-1 gap-x-0 gap-y-12 pr-6 sm:gap-x-5 md:grid-cols-2 md:gap-x-20 md:pr-0 lg:mx-24">
                     <!-- Feature 1 -->
                     <div class="flex space-x-6">
                         <div>
