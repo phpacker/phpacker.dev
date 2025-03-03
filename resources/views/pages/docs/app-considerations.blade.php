@@ -81,7 +81,9 @@ define('APP_DATA', match (PHP_OS_FAMILY) {
                 <strong>Environment variables</strong>
                 : Access environment variables using the standard
                 <code>getenv()</code>
-                function or $_ENV superglobal
+                function or
+                <code>$_ENV</code>
+                superglobal
             </li>
             <li>
                 <strong>Temporary files</strong>
