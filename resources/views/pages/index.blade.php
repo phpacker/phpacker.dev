@@ -4,7 +4,7 @@
 >
     <flux:main>
         {{-- Hero --}}
-        <div class="flex h-screen items-center justify-center">
+        <div class="flex h-screen items-center justify-center overflow-x-hidden">
             <div class="flex">
                 <div class="flex w-lg max-w-full flex-col sm:w-xl">
                     <h1 class="mb-6 text-center text-3xl leading-snug font-extrabold tracking-wide sm:text-6xl">
@@ -84,7 +84,7 @@
         </div>
 
         <div class="mt-20 mb-10 flex justify-center md:mt-60">
-            <div class="max-w-6xl rounded-xl bg-slate-100 px-6 py-20 text-slate-700 dark:bg-white">
+            <div class="max-w-6xl rounded-xl bg-slate-100 px-6 py-10 text-slate-700 sm:py-20 dark:bg-white">
                 <!-- Intro -->
                 <div class="mt-6 flex flex-col items-center justify-center space-y-10 md:mx-24">
                     <h2 class="text-center text-3xl">Package PHP Apps Without the Hassle</h2>
@@ -95,7 +95,7 @@
                 <hr class="mx-8 my-14 text-slate-300 md:mx-20 md:my-24 dark:text-slate-200" />
 
                 <!-- Grid -->
-                <div class="grid grid-cols-1 gap-x-0 gap-y-12 pr-6 sm:gap-x-5 md:grid-cols-2 md:gap-x-20 md:pr-0 lg:mx-24">
+                <div class="grid grid-cols-1 gap-x-0 gap-y-8 pr-6 sm:gap-x-5 sm:gap-y-12 md:grid-cols-2 md:gap-x-20 md:pr-0 lg:mx-24">
                     <!-- Feature 1 -->
                     <div class="flex space-x-5 sm:space-x-6">
                         <div>
