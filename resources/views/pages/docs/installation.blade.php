@@ -41,8 +41,8 @@
             Quick Start
         </flux:heading>
 
-        <p>Build an executable from your PHP script with a single command:</p>
+        <p>Build a executable from your PHP script with a single command:</p>
 
-        <x-code language="shell">phpacker build --src=./app.php</x-code>
+        <x-code language="shell">phpacker build --src=./app.phar</x-code>
     </x-prose>
 </x-layouts.docs>
