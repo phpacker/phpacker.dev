@@ -45,7 +45,9 @@
             class="flex items-center justify-center pt-10"
         >
             <div
+                x-title="phpacker-demo"
                 x-data="{
+                    zoom: false,
                     src: null,
                     play() {
                         const gif = '/cli-demo.gif'
@@ -55,8 +57,12 @@
                 }"
                 x-init="play()"
                 x-intersect.enter.half.once="play()"
-                x-title="phpacker-demo"
-                class="relative w-3xl max-w-full flex-col overflow-hidden rounded-lg bg-[#0C182D] shadow-lg"
+                x-intersect:enter.half="zoom = true"
+                x-intersect:leave.half="zoom = false"
+                class="relative w-3xl max-w-full flex-col overflow-hidden rounded-lg bg-[#0C182D] shadow-lg transition-transform duration-700 ease-in-out"
+                :class="{
+                    'scale-105 md:scale-110 lg:scale-120': zoom
+                }"
             >
                 <div class="flex space-x-1.5 px-2 py-3">
                     <div class="size-3 rounded-full bg-red-500 opacity-80"></div>
@@ -123,6 +129,18 @@
                     <!-- Feature 3 -->
                     <div class="flex space-x-5 sm:space-x-6">
                         <div>
+                            <x-svg.pitch.truck class="text-brand size-6 sm:size-10" />
+                        </div>
+
+                        <div>
+                            <h3 class="mb-2 font-semibold">Seamless distribution</h3>
+                            <p>Install the right build automatically for any platform with our Composer Installer</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="flex space-x-5 sm:space-x-6">
+                        <div>
                             <x-svg.pitch.brackets class="text-brand size-6 sm:size-10" />
                         </div>
 
@@ -132,7 +150,7 @@
                         </div>
                     </div>
 
-                    <!-- Feature 4 -->
+                    <!-- Feature 5 -->
                     <div class="flex space-x-4 sm:space-x-5">
                         <div>
                             <x-svg.pitch.php class="text-brand size-7 sm:size-11" />
@@ -144,17 +162,19 @@
                         </div>
                     </div>
 
-                    <!-- Feature 5 -->
-                    <div class="flex space-x-5 sm:space-x-6">
+                    <!-- Feature 6 -->
+                    {{--
+                        <div class="flex space-x-5 sm:space-x-6">
                         <div>
-                            <x-svg.pitch.update class="text-brand size-6 sm:size-10" />
+                        <x-svg.pitch.update class="text-brand size-6 sm:size-10" />
                         </div>
-
+                        
                         <div>
-                            <h3 class="mb-2 font-semibold">Automated Updates</h3>
-                            <p>Keep your PHP runtime binaries up-to-date with a simple command</p>
+                        <h3 class="mb-2 font-semibold">Automated Updates</h3>
+                        <p>Keep your PHP runtime binaries up-to-date with a simple command</p>
                         </div>
-                    </div>
+                        </div>
+                    --}}
 
                     <!-- Feature 6 -->
                     <div class="flex space-x-5 sm:space-x-6">
