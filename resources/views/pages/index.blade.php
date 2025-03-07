@@ -61,7 +61,7 @@
                 x-intersect:leave.half="zoom = false"
                 class="relative w-3xl max-w-full flex-col overflow-hidden rounded-lg bg-[#0C182D] shadow-lg transition-transform duration-700 ease-in-out"
                 :class="{
-                    'scale-105 md:scale-110 lg:scale-120': zoom
+                    'scale-105 md:scale-110': zoom
                 }"
             >
                 <div class="flex space-x-1.5 px-2 py-3">
