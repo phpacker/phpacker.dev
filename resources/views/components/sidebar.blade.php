@@ -35,6 +35,7 @@
     <flux:navlist.item href="/docs/custom-php-builds">Custom PHP Builds</flux:navlist.item>
     <flux:navlist.item href="/docs/updating-php-binaries">Updating PHP Binaries</flux:navlist.item>
     <flux:navlist.item href="/docs/app-considerations">App Considerations</flux:navlist.item>
+    <flux:navlist.item href="/docs/distribution">Distribution</flux:navlist.item>
 </flux:navlist>
 
 <flux:spacer />
