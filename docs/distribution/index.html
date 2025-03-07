@@ -26,7 +26,7 @@
             content="width=device-width, initial-scale=1"
         />
 
-        <title>Installation - phpacker</title>
+        <title>Distribution - phpacker</title>
 
         <!-- Icons -->
         <link
@@ -195,7 +195,7 @@
             </button>
 
 <nav class="flex flex-col overflow-visible min-h-auto lg:gap-y-1" data-flux-navlist>
-    <a href="/docs/installation" data-current="data-current" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+    <a href="/docs/installation" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Installation</div>
     </a>
     <a href="/docs/getting-started" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
@@ -213,7 +213,7 @@
     <a href="/docs/app-considerations" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>App Considerations</div>
     </a>
-    <a href="/docs/distribution" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+    <a href="/docs/distribution" data-current="data-current" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Distribution</div>
     </a>
 </nav>
@@ -317,45 +317,63 @@
     </header>
 
     <div class="[grid-area:main] p-6 lg:p-8 [[data-flux-container]_&amp;]:px-0" data-flux-main>
-    <h1 class="font-medium text-zinc-800 dark:text-white text-2xl [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Installation</h1>
+    <h1 class="font-medium text-zinc-800 dark:text-white text-2xl [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Distribution</h1>
 
         
     <div class="text-base text-zinc-500 dark:text-white/70 max-w-prose" data-flux-subheading>
-    PHPacker enables you to package any PHP script or PHAR into a standalone, cross-platform executable. It handles all the complexity of bundling PHP runtime with your application, making distribution simple and hassle-free.
+    There are multiple ways to distribute your binaries, they are just files after all. The most common in the PHP ecosystem is through Composer
 </div>
 
     <div data-orientation="horizontal" role="none" class="border-0 [print-color-adjust:exact] bg-zinc-800/5 dark:bg-white/10 h-px w-full my-6" data-flux-separator></div>
 
     <div class="prose-zinc prose-sm max-w-3xl prose-a:text-violet-600 dark:prose-a:text-violet-500 prose-code:bg-zinc-100 dark:prose-code:bg-zinc-700 prose-code:py-1 prose-code:px-1.5 prose-code:rounded-sm prose-code:inset-shadow-sm">
-    <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Installation Options</h2>
+    <p>Composer itself does not natively support automatic binary selection based on platform. PHPacker automates this process by use of a specialized composer plugin.</p>
 
-        
-        <p>You can install PHPacker globally via Composer:</p>
+        <p>The PHPacker Composer Installer automates everything around installing the correct executable for each platform. Simply drop it in and you're ready to go.</p>
 
-        <div>
-    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">composer</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">global</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">require</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">phpacker/phpacker</span></div></code></pre>
-
-    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BCE7FF;">composer </span><span style="color: #BCF0C0;">global</span><span style="color: #BCE7FF;"> </span><span style="color: #BCF0C0;">require</span><span style="color: #BCE7FF;"> </span><span style="color: #BCF0C0;">phpacker/phpacker</span></div></code></pre>
-</div>
-
-        <p>Or as a project dependency:</p>
+        <p>Go ahead and install the PHPacker Composer Installer plugin in your app. Note it cannot be a dev-dependency</p>
 
         <div>
-    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">composer</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">require</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">phpacker/phpacker</span><span style="color: #575F66;"> </span><span style="color: #4CBF99;">--dev</span></div></code></pre>
+    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">composer</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">require</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">phpacker/composer-installer</span></div></code></pre>
 
-    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BCE7FF;">composer </span><span style="color: #BCF0C0;">require</span><span style="color: #BCE7FF;"> </span><span style="color: #BCF0C0;">phpacker/phpacker</span><span style="color: #BCE7FF;"> </span><span style="color: #82AAFF;">--dev</span></div></code></pre>
+    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BCE7FF;">composer </span><span style="color: #BCF0C0;">require</span><span style="color: #BCE7FF;"> </span><span style="color: #BCF0C0;">phpacker/composer-installer</span></div></code></pre>
 </div>
 
-        <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Quick Start</h2>
+        <p>
+            Next, define the alias you want to use for your executable inside
+            <code>composer.json</code>
+            :
+        </p>
 
-        
-        <p>Build an executable from your PHP script with a single command:</p>
-
+        <!-- prettier-ignore -->
         <div>
-    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">phpacker</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">build</span><span style="color: #575F66;"> </span><span style="color: #4CBF99;">--src=./app.php</span></div></code></pre>
+    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="json" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A173FF;">&quot;extra&quot;</span><span style="color: #575F66;">: {</span></div><div class='line'><span style="color: #575F66;">    </span><span style="color: #4589FF;">&quot;phpacker-install&quot;</span><span style="color: #575F66B3;">:</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">&quot;my-app&quot;</span><span style="color: #575F66B3;">,</span></div><div class='line'><span style="color: #575F66;">}</span></div></code></pre>
 
-    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BCE7FF;">phpacker </span><span style="color: #BCF0C0;">build</span><span style="color: #BCE7FF;"> </span><span style="color: #82AAFF;">--src=./app.php</span></div></code></pre>
+    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="json" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #ECE7CD;">&quot;</span><span style="color: #BCF0C0;">extra</span><span style="color: #ECE7CD;">&quot;</span><span style="color: #BCE7FF;">: {</span></div><div class='line'><span style="color: #BCE7FF;">    </span><span style="color: #91DACD;">&quot;phpacker-install&quot;</span><span style="color: #BCE7FF;">: </span><span style="color: #ECE7CD;">&quot;</span><span style="color: #E0AFF5;">my-app</span><span style="color: #ECE7CD;">&quot;</span><span style="color: #BCE7FF;">,</span></div><div class='line'><span style="color: #BCE7FF;">}</span></div></code></pre>
 </div>
+
+        <p>
+            You don't have to define the typical bin section in your
+            <code>composer.json</code>
+            file. PHPacker will discover your executables using the detected
+            <code>phpacker.json</code>
+            config file.
+        </p>
+
+        <p>
+            Now whenever your cli app is installed, the installer will automatically detect your
+            <code>phpacker.json</code>
+            file and create a proxy file to the correct executable for the intended platform and architecture, in this example using
+            <code>my-app</code>
+            as the alias.
+        </p>
+
+        <p>The executables installed in a Windows environment will not use the .exe extension. We handle installation of executables in a special way when run in a Windows environment:</p>
+
+        <ol class="list-disc">
+            <li>A .bat file is generated automatically to reference the binary</li>
+            <li>A Unix-style proxy file with the same name as the binary is also generated, which is useful for WSL, Linux VMs, etc.</li>
+        </ol>
 </div>
 </div>
 
