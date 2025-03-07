@@ -321,17 +321,17 @@
 
         
     <div class="text-base text-zinc-500 dark:text-white/70 max-w-prose" data-flux-subheading>
-    There are multiple ways to distribute your binaries, they are just files after all. The most common in the PHP ecosystem is through Composer
+    There are multiple ways to distribute your binaries. While they are simply files, the most common distribution method in the PHP ecosystem is through Composer.
 </div>
 
     <div data-orientation="horizontal" role="none" class="border-0 [print-color-adjust:exact] bg-zinc-800/5 dark:bg-white/10 h-px w-full my-6" data-flux-separator></div>
 
     <div class="prose-zinc prose-sm max-w-3xl prose-a:text-violet-600 dark:prose-a:text-violet-500 prose-code:bg-zinc-100 dark:prose-code:bg-zinc-700 prose-code:py-1 prose-code:px-1.5 prose-code:rounded-sm prose-code:inset-shadow-sm">
-    <p>Composer itself does not natively support automatic binary selection based on platform. PHPacker automates this process by use of a specialized composer plugin.</p>
+    <p>Composer doesn't natively support automatic binary selection based on environment. PHPacker solves this by use of a a specialized Composer plugin that handles platform-specific binary distribution automatically.</p>
 
-        <p>The PHPacker Composer Installer automates everything around installing the correct executable for each platform. Simply drop it in and you're ready to go.</p>
+        <p>The PHPacker Composer Installer seamlessly manages the installation of the correct executable for each platform. Simply integrate it into your project and everything is handled for you.</p>
 
-        <p>Go ahead and install the PHPacker Composer Installer plugin in your app. Note it cannot be a dev-dependency</p>
+        <p>To get started, install the PHPacker Composer Installer plugin in your application. Important: it must be a regular dependency, not a dev-dependency.</p>
 
         <div>
     <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">composer</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">require</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">phpacker/composer-installer</span></div></code></pre>
@@ -340,9 +340,9 @@
 </div>
 
         <p>
-            Next, define the alias you want to use for your executable inside
+            Next, define your executable's alias in your
             <code>composer.json</code>
-            :
+            file:
         </p>
 
         <!-- prettier-ignore -->
@@ -353,26 +353,28 @@
 </div>
 
         <p>
-            You don't have to define the typical bin section in your
+            You don't need to define the typical
+            <code>bin</code>
+            section in your
             <code>composer.json</code>
-            file. PHPacker will discover your executables using the detected
+            file. PHPacker automatically discovers your executables using the
             <code>phpacker.json</code>
-            config file.
+            configuration file in your project.
         </p>
 
         <p>
-            Now whenever your cli app is installed, the installer will automatically detect your
+            When your CLI application is installed, the installer detects your
             <code>phpacker.json</code>
-            file and create a proxy file to the correct executable for the intended platform and architecture, in this example using
+            file and creates a proxy to the correct executable for the user's platform and architecture, using
             <code>my-app</code>
-            as the alias.
+            (or whatever alias you've defined) as the command name.
         </p>
 
-        <p>The executables installed in a Windows environment will not use the .exe extension. We handle installation of executables in a special way when run in a Windows environment:</p>
+        <p>For Windows environments, executables are handled specially and do not use the .exe extension. Our Windows installation process includes:</p>
 
         <ol class="list-disc">
-            <li>A .bat file is generated automatically to reference the binary</li>
-            <li>A Unix-style proxy file with the same name as the binary is also generated, which is useful for WSL, Linux VMs, etc.</li>
+            <li>Automatic generation of a .bat file that references the binary</li>
+            <li>Creation of a Unix-style proxy file with the same name as the binary, which supports WSL, Linux VMs, and similar environments</li>
         </ol>
 </div>
 </div>
