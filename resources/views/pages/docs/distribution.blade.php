@@ -10,7 +10,7 @@
         size="lg"
         class="max-w-prose"
     >
-        There are multiple ways to distribute your binaries, they are just files after all. The most common in the PHP ecosystem is through Composer
+        There are multiple ways to distribute your binaries. While they are simply files, the most common distribution method in the PHP ecosystem is through Composer.
     </flux:subheading>
 
     <flux:separator
@@ -19,18 +19,18 @@
     />
 
     <x-prose>
-        <p>Composer itself does not natively support automatic binary selection based on platform. PHPacker automates this process by use of a specialized composer plugin.</p>
+        <p>Composer doesn't natively support automatic binary selection based on environment. PHPacker solves this by use of a a specialized Composer plugin that handles platform-specific binary distribution automatically.</p>
 
-        <p>The PHPacker Composer Installer automates everything around installing the correct executable for each platform. Simply drop it in and you're ready to go.</p>
+        <p>The PHPacker Composer Installer seamlessly manages the installation of the correct executable for each platform. Simply integrate it into your project and everything is handled for you.</p>
 
-        <p>Go ahead and install the PHPacker Composer Installer plugin in your app. Note it cannot be a dev-dependency</p>
+        <p>To get started, install the PHPacker Composer Installer plugin in your application. Important: it must be a regular dependency, not a dev-dependency.</p>
 
         <x-code language="shell">composer require phpacker/composer-installer</x-code>
 
         <p>
-            Next, define the alias you want to use for your executable inside
+            Next, define your executable's alias in your
             <code>composer.json</code>
-            :
+            file:
         </p>
 
         <!-- prettier-ignore -->
@@ -41,26 +41,28 @@
         </x-code>
 
         <p>
-            You don't have to define the typical bin section in your
+            You don't need to define the typical
+            <code>bin</code>
+            section in your
             <code>composer.json</code>
-            file. PHPacker will discover your executables using the detected
+            file. PHPacker automatically discovers your executables using the
             <code>phpacker.json</code>
-            config file.
+            configuration file in your project.
         </p>
 
         <p>
-            Now whenever your cli app is installed, the installer will automatically detect your
+            When your CLI application is installed, the installer detects your
             <code>phpacker.json</code>
-            file and create a proxy file to the correct executable for the intended platform and architecture, in this example using
+            file and creates a proxy to the correct executable for the user's platform and architecture, using
             <code>my-app</code>
-            as the alias.
+            (or whatever alias you've defined) as the command name.
         </p>
 
-        <p>The executables installed in a Windows environment will not use the .exe extension. We handle installation of executables in a special way when run in a Windows environment:</p>
+        <p>For Windows environments, executables are handled specially and do not use the .exe extension. Our Windows installation process includes:</p>
 
         <ol class="list-disc">
-            <li>A .bat file is generated automatically to reference the binary</li>
-            <li>A Unix-style proxy file with the same name as the binary is also generated, which is useful for WSL, Linux VMs, etc.</li>
+            <li>Automatic generation of a .bat file that references the binary</li>
+            <li>Creation of a Unix-style proxy file with the same name as the binary, which supports WSL, Linux VMs, and similar environments</li>
         </ol>
     </x-prose>
 </x-layouts.docs>
