@@ -51,9 +51,9 @@
         <p>
             Now whenever your cli app is installed, the installer will automatically detect your
             <code>phpacker.json</code>
-            file and copy the correct executable for the intended platform and architecture, in this example using
+            file and create a proxy file to the correct executable for the intended platform and architecture, in this example using
             <code>my-app</code>
-            as the executable name.
+            as the alias.
         </p>
 
         <p>The executables installed in a Windows environment will not use the .exe extension. We handle installation of executables in a special way when run in a Windows environment:</p>
