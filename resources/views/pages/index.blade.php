@@ -104,7 +104,7 @@
 
                         <div>
                             <h3 class="mb-2 font-semibold">Self-Contained Executables</h3>
-                            <p>Distribute your CLI app as a single file - PHP is bundled with your application, eliminating compatibility issues.</p>
+                            <p>Distribute your CLI app as a single file - PHP is bundled with your application</p>
                         </div>
                     </div>
 
@@ -116,7 +116,7 @@
 
                         <div>
                             <h3 class="mb-2 font-semibold">Cross-Platform Support</h3>
-                            <p>Build executables for macOS, Linux, and Windows from a single codebase - deploy anywhere without platform-specific adjustments.</p>
+                            <p>Build executables for macOS, Linux, and Windows from a single codebase</p>
                         </div>
                     </div>
 
@@ -128,7 +128,7 @@
 
                         <div>
                             <h3 class="mb-2 font-semibold">Project Configuration</h3>
-                            <p>Store build and INI settings in version-controlled files - ensure consistent builds across teams and CI/CD pipelines.</p>
+                            <p>Store build and INI config in version-controlled files</p>
                         </div>
                     </div>
 
@@ -140,7 +140,7 @@
 
                         <div>
                             <h3 class="mb-2 font-semibold">Multiple PHP Versions</h3>
-                            <p>Choose from PHP 8.2, 8.3, or 8.4 to match your application's requirements or take advantage of latest features.</p>
+                            <p>Choose from PHP 8.2, 8.3, or 8.4 to match your application's requirements</p>
                         </div>
                     </div>
 
@@ -152,7 +152,7 @@
 
                         <div>
                             <h3 class="mb-2 font-semibold">Automated Updates</h3>
-                            <p>Keep your PHP runtime binaries up-to-date with a simple command - always build with the latest improvements.</p>
+                            <p>Keep your PHP runtime binaries up-to-date with a simple command</p>
                         </div>
                     </div>
 
@@ -164,7 +164,7 @@
 
                         <div>
                             <h3 class="mb-2 font-semibold">Custom PHP Binaries</h3>
-                            <p>Use your own custom-built PHP binaries with specific extensions by pointing to your forked repository.</p>
+                            <p>Use your own custom-built PHP binaries with specific extensions</p>
                         </div>
                     </div>
                 </div>
