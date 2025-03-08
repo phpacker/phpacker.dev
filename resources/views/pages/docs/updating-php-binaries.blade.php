@@ -21,6 +21,9 @@ phpacker download
 
 # Update custom repository
 phpacker download "your-org/php-bin"
+
+# Force redownload
+phpacker download "your-org/php-bin" --force
         </x-code>
 
         <flux:heading

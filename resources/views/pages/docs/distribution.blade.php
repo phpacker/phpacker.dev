@@ -21,8 +21,6 @@
     <x-prose>
         <p>Composer doesn't natively support automatic binary selection based on environment. PHPacker solves this by use of a a specialized Composer plugin that handles platform-specific binary distribution automatically.</p>
 
-        <p>The PHPacker Composer Installer seamlessly manages the installation of the correct executable for each platform. Simply integrate it into your project and everything is handled for you.</p>
-
         <p>To get started, install the PHPacker Composer Installer plugin in your application. Important: it must be a regular dependency, not a dev-dependency.</p>
 
         <x-code language="shell">composer require phpacker/composer-installer</x-code>
