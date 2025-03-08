@@ -42,7 +42,7 @@
 
         <div
             id="in-action"
-            class="flex items-center justify-center pt-10"
+            class="flex min-h-screen items-center justify-center"
         >
             <div
                 x-title="phpacker-demo"
@@ -90,7 +90,7 @@
         </div>
 
         <div class="mt-20 mb-10 flex justify-center md:mt-60">
-            <div class="max-w-6xl rounded-xl bg-slate-100 px-6 py-10 text-slate-700 shadow-xl shadow-slate-300 sm:py-20 dark:bg-white dark:shadow-slate-800">
+            <div class="max-w-6xl rounded-xl bg-slate-100 px-6 pt-10 pb-16 text-slate-700 shadow-xl shadow-slate-300 sm:py-20 md:pb-28 dark:bg-white dark:shadow-slate-800">
                 <!-- Intro -->
                 <div class="mt-6 flex flex-col items-center justify-center space-y-10 md:mx-24">
                     <h2 class="text-center text-3xl">Package PHP Apps Without the Hassle</h2>
