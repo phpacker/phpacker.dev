@@ -55,9 +55,9 @@ $appName = 'my-app';
 
 // Define APP_DATA constant
 define('APP_DATA', match (PHP_OS_FAMILY) {
-    'Darwin' => Path::join(getenv('HOME'), 'Library', 'Application', 'Support', $appName),
+    'Darwin' => Path::join(getenv('HOME'), 'Library', 'Application', 'Support', ".{$appName}"),
     'Windows' => Path::join(getenv('LOCALAPPDATA'), $appName),
-    default => Path::join(getenv('HOME'), $appName))
+    default => Path::join(getenv('HOME'), ".{$appName}"))
 });
         </x-code>
 
