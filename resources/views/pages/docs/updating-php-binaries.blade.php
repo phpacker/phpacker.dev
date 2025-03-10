@@ -38,7 +38,7 @@ phpacker download "your-org/php-bin" --force
         <!-- prettier-ignore -->
         <x-code language="shell" >
 # Display cache information
-phpacker cache info
+phpacker cache list
 
 # Clear all cached binaries
 phpacker cache clear
