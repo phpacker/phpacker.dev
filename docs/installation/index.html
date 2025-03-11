@@ -58,7 +58,7 @@
         />
 
         <!-- Styles / Scripts -->
-        <link rel="preload" as="style" href="https://phpacker.dev/build/assets/app-CVrfzj59.css" /><link rel="modulepreload" href="https://phpacker.dev/build/assets/app-NLaJqq-c.js" /><link rel="stylesheet" href="https://phpacker.dev/build/assets/app-CVrfzj59.css" data-navigate-track="reload" /><script type="module" src="https://phpacker.dev/build/assets/app-NLaJqq-c.js" data-navigate-track="reload"></script>
+        <link rel="preload" as="style" href="https://phpacker.dev/build/assets/app-CwUKzWDj.css" /><link rel="modulepreload" href="https://phpacker.dev/build/assets/app-BQIHbD3X.js" /><link rel="stylesheet" href="https://phpacker.dev/build/assets/app-CwUKzWDj.css" data-navigate-track="reload" /><script type="module" src="https://phpacker.dev/build/assets/app-BQIHbD3X.js" data-navigate-track="reload"></script>
         <style>
     :root.dark {
         color-scheme: dark;
@@ -90,7 +90,8 @@
 
     window.Flux.applyAppearance(window.localStorage.getItem('flux.appearance') || 'system')
 </script>
-    </head>
+
+            </head>
 
     <body class="min-h-screen bg-white dark:bg-zinc-800">
         <div class="fixed top-4 right-4 hidden lg:block">
@@ -179,7 +180,27 @@
     </button>
 </div>
 
+<div >
+    <div id="docsearch"></div>
 
+    <button class="w-full border rounded-lg block disabled:shadow-none dark:shadow-none appearance-none text-base sm:text-sm py-2 h-10 leading-[1.375rem] pl-10 pr-10 bg-zinc-800/5 dark:bg-white/10 dark:disabled:bg-white/[7%] text-zinc-700 placeholder-zinc-500 disabled:placeholder-zinc-400 dark:text-zinc-200 dark:placeholder-white/60 dark:disabled:placeholder-white/40 border-0  w-full relative flex" type="button" placeholder="Search..." x-on:click="document.querySelector('#docsearch .DocSearch-Button').click()">
+                    <div class="z-10 absolute top-0 bottom-0 flex items-center justify-center text-xs text-zinc-400/75 pl-3 left-0">
+                <svg class="shrink-0 [:where(&amp;)]:size-5" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/>
+</svg>
+
+                    </div>
+        
+                    <div class="block self-center text-left flex-1 font-medium text-zinc-400 dark:text-white/40">
+                Search...
+            </div>
+        
+                    <div class="absolute top-0 bottom-0 flex items-center justify-center text-xs text-zinc-400/75 pr-4 right-0">
+                ⌘K
+            </div>
+        
+            </button>
+</div>
 
 <nav class="flex flex-col overflow-visible min-h-auto lg:gap-y-1" data-flux-navlist>
     <a href="/docs/installation" data-current="data-current" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
