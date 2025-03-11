@@ -18,12 +18,14 @@
     />
 </div>
 
-<flux:input
+{{--
+    <flux:input
     as="button"
     variant="filled"
     placeholder="Search..."
     icon="magnifying-glass"
-/>
+    />
+--}}
 
 <flux:navlist
     variant="outline"
