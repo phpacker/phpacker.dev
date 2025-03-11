@@ -17,6 +17,8 @@
     </flux:header>
 
     <flux:main>
-        {{ $slot }}
+        <main>
+            {{ $slot }}
+        </main>
     </flux:main>
 </x-layouts.app>
