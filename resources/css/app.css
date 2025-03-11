@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @import "./torchlight";
+@import "./docsearch";
 
 /* Plugins */
 @plugin "@tailwindcss/typography";
