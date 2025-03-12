@@ -52,6 +52,7 @@
                 </a>
                 )
             </li>
+            <li>Add your GitHub token in the forks' config</li>
             <li>Run the GitHub Workflows</li>
             <li>Tag a release</li>
         </ol>
