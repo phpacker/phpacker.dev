@@ -1,2 +1,2 @@
-import './alpine.js'
-import './docsearch.js'
+import "./alpine.js";
+import "./docsearch.js";
