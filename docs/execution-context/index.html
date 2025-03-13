@@ -26,7 +26,7 @@
             content="width=device-width, initial-scale=1"
         />
 
-        <title>Installation - phpacker</title>
+        <title>Execution Context - phpacker</title>
 
         <!-- Icons -->
         <link
@@ -203,7 +203,7 @@
 </div>
 
 <nav class="flex flex-col overflow-visible min-h-auto lg:gap-y-1" data-flux-navlist>
-    <a href="/docs/installation" data-current="data-current" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+    <a href="/docs/installation" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Installation</div>
     </a>
     <a href="/docs/getting-started" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
@@ -221,7 +221,7 @@
     <a href="/docs/app-considerations" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>App Considerations</div>
     </a>
-    <a href="/docs/execution-context" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+    <a href="/docs/execution-context" data-current="data-current" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Execution Context</div>
     </a>
     <a href="/docs/distribution" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
@@ -329,44 +329,102 @@
 
     <div class="[grid-area:main] p-6 lg:p-8 [[data-flux-container]_&amp;]:px-0" data-flux-main>
     <main>
-            <h1 class="font-medium text-zinc-800 dark:text-white text-2xl [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Installation</h1>
+            <h1 class="font-medium text-zinc-800 dark:text-white text-2xl [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Detecting Execution Context</h1>
 
         
     <div class="text-base text-zinc-500 dark:text-white/70 max-w-prose" data-flux-subheading>
-    PHPacker enables you to package any PHP script or PHAR into a standalone, cross-platform executable. It handles all the complexity of bundling PHP runtime with your application, making distribution simple and hassle-free.
+    PHPacker provides built-in environment detection so you can adapt your application's behavior based on whether it's running locally or in a build.
 </div>
 
     <div data-orientation="horizontal" role="none" class="border-0 [print-color-adjust:exact] bg-zinc-800/5 dark:bg-white/10 h-px w-full my-6" data-flux-separator></div>
 
     <div class="prose-zinc prose-sm max-w-3xl prose-a:text-violet-600 dark:prose-a:text-violet-500 prose-code:bg-zinc-100 dark:prose-code:bg-zinc-700 prose-code:py-1 prose-code:px-1.5 prose-code:rounded-sm prose-code:inset-shadow-sm">
-    <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Installation Options</h2>
+    <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Environment Detection</h2>
 
         
-        <p>You can install PHPacker globally via Composer:</p>
+        <p>
+            PHPacker automatically injects a
+            <code>PHPACKER_ENV</code>
+            environment variable into your application's runtime. This variable indicates whether your application is:
+        </p>
 
+        <ul class="list-disc">
+            <li>
+                Running locally during development (
+                <code>local</code>
+                )
+            </li>
+            <li>
+                Running from a compiled distribution binary (
+                <code>production</code>
+                )
+            </li>
+        </ul>
+
+        <p>
+            You can access this variable using PHP's standard
+            <code>getenv()</code>
+            function:
+        </p>
+
+        <!-- prettier-ignore -->
         <div>
-    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">composer</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">global</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">require</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">phpacker/phpacker</span></div></code></pre>
+    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="php" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #575F66;">$environment </span><span style="color: #ED9366;">=</span><span style="color: #575F66;"> </span><span style="color: #F07171;">getenv</span><span style="color: #575F66;">(</span><span style="color: #A173FF;">&#39;PHPACKER_ENV&#39;</span><span style="color: #575F66;">)</span><span style="color: #575F66B3;">;</span><span style="color: #575F66;"> </span><span style="color: #ABB0B6;">// Returns &#39;local&#39; or &#39;production&#39;</span></div></code></pre>
 
-    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BCE7FF;">composer </span><span style="color: #BCF0C0;">global</span><span style="color: #BCE7FF;"> </span><span style="color: #BCF0C0;">require</span><span style="color: #BCE7FF;"> </span><span style="color: #BCF0C0;">phpacker/phpacker</span></div></code></pre>
+    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="php" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A4CEEE;">$environment</span><span style="color: #BCE7FF;"> </span><span style="color: #00BFF9;">=</span><span style="color: #BCE7FF;"> </span><span style="color: #F7ECB5;">getenv</span><span style="color: #BCE7FF;">(</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCF0C0;">PHPACKER_ENV</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCE7FF;">); </span><span style="color: #999999;">// Returns &#39;local&#39; or &#39;production&#39;</span></div></code></pre>
 </div>
 
-        <p>Or as a project dependency:</p>
-
-        <div>
-    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">composer</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">require</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">phpacker/phpacker</span><span style="color: #575F66;"> </span><span style="color: #4CBF99;">--dev</span></div></code></pre>
-
-    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BCE7FF;">composer </span><span style="color: #BCF0C0;">require</span><span style="color: #BCE7FF;"> </span><span style="color: #BCF0C0;">phpacker/phpacker</span><span style="color: #BCE7FF;"> </span><span style="color: #82AAFF;">--dev</span></div></code></pre>
-</div>
-
-        <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Quick Start</h2>
+        <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Common Use Cases</h2>
 
         
-        <p>Build a executable from your PHP script with a single command:</p>
+        <p>This environment detection enables several powerful patterns:</p>
 
+        <ol class="list-decimal">
+            <li>
+                <strong>Error Handling</strong>
+                : Display detailed error information during development while showing user-friendly error pages in production
+            </li>
+            <li>
+                <strong>Performance Optimization</strong>
+                : Enable caching and other optimizations in production while keeping development more dynamic
+            </li>
+            <li>
+                <strong>Feature Toggling</strong>
+                : Activate debugging tools or development-only features in local environments
+            </li>
+        </ol>
+
+        <p>Below you see a example on toggling the bootstrapping of the popular Collision package based on execution context:</p>
+
+        <!-- prettier-ignore -->
         <div>
-    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #399EE6;">phpacker</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">build</span><span style="color: #575F66;"> </span><span style="color: #4CBF99;">--src=./app.phar</span></div></code></pre>
+    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="php" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A173FF;">use</span><span style="color: #575F66;"> NunoMaduro</span><span style="color: #575F66B3;">\</span><span style="color: #575F66;">Collision</span><span style="color: #575F66B3;">\</span><span style="color: #4589FF;">Provider</span><span style="color: #575F66B3;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #A173FF;">if</span><span style="color: #575F66;">(</span><span style="color: #F07171;">getenv</span><span style="color: #575F66;">(</span><span style="color: #A173FF;">&#39;PHPACKER_ENV&#39;</span><span style="color: #575F66;">) </span><span style="color: #ED9366;">===</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">&#39;local&#39;</span><span style="color: #575F66;">)</span></div><div class='line'><span style="color: #575F66;">    (</span><span style="color: #A173FF;">new</span><span style="color: #575F66;"> </span><span style="color: #4589FF;">Provider</span><span style="color: #575F66;">)</span><span style="color: #ED9366;">-&gt;</span><span style="color: #14B8A6;">register</span><span style="color: #575F66;">()</span><span style="color: #575F66B3;">;</span></div><div class='line'><span style="color: #575F66;">}</span></div></code></pre>
 
-    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="shell" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BCE7FF;">phpacker </span><span style="color: #BCF0C0;">build</span><span style="color: #BCE7FF;"> </span><span style="color: #82AAFF;">--src=./app.phar</span></div></code></pre>
+    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="php" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #00BFF9;">use</span><span style="color: #BCE7FF;"> NunoMaduro\Collision\</span><span style="color: #7FDBCA;">Provider</span><span style="color: #BCE7FF;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #00BFF9;">if</span><span style="color: #BCE7FF;">(</span><span style="color: #F7ECB5;">getenv</span><span style="color: #BCE7FF;">(</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCF0C0;">PHPACKER_ENV</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCE7FF;">) </span><span style="color: #00BFF9;">===</span><span style="color: #BCE7FF;"> </span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCF0C0;">local</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCE7FF;">)</span></div><div class='line'><span style="color: #BCE7FF;">    (</span><span style="color: #00BFF9;">new</span><span style="color: #BCE7FF;"> </span><span style="color: #7FDBCA;">Provider</span><span style="color: #BCE7FF;">)</span><span style="color: #00BFF9;">-&gt;</span><span style="color: #87AFF4;">register</span><span style="color: #BCE7FF;">();</span></div><div class='line'><span style="color: #BCE7FF;">}</span></div></code></pre>
+</div>
+
+        <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Caveats</h2>
+
+        
+        <p>
+            The environment variable will always be detected in
+            <code>production</code>
+            builds.
+        </p>
+
+        <p>
+            The
+            <code>local</code>
+            environment is always detected in apps that use the composer autoloader. However, without the autoloader present the environment is not automatically injected.
+        </p>
+
+        <p>If this applies to you, please consider these alternatives:</p>
+
+        <!-- prettier-ignore -->
+        <div>
+    <pre class="group-[.dark]/html:hidden"><code data-theme="serendipity-light" data-lang="php" class="torchlight text-sm select-all" style="background-color: #fafafa; --theme-selection-background: #d1e4f4fd;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #ABB0B6;">// Inverting the &#39;production&#39; conditional</span></div><div class='line'><span style="color: #A173FF;">if</span><span style="color: #575F66;">(</span><span style="color: #F07171;">getenv</span><span style="color: #575F66;">(</span><span style="color: #A173FF;">&#39;PHPACKER_ENV&#39;</span><span style="color: #575F66;">) </span><span style="color: #ED9366;">!==</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">&#39;production&#39;</span><span style="color: #575F66;">)</span></div><div class='line'><span style="color: #575F66;">    </span><span style="color: #ABB0B6;">//</span></div><div class='line'><span style="color: #575F66;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #ABB0B6;">// Detect the SAPI (&#39;micro&#39; in builds)</span></div><div class='line'><span style="color: #A173FF;">if</span><span style="color: #575F66;">(</span><span style="color: #F07171;">php_sapi_name</span><span style="color: #575F66;">() </span><span style="color: #ED9366;">===</span><span style="color: #575F66;"> </span><span style="color: #A173FF;">&#39;micro&#39;</span><span style="color: #575F66;">)</span></div><div class='line'><span style="color: #575F66;">    </span><span style="color: #ABB0B6;">//</span></div><div class='line'><span style="color: #575F66;">}</span></div></code></pre>
+
+    <pre class="hidden group-[.dark]/html:block"><code data-theme="winter-is-coming-blue" data-lang="php" class="torchlight text-sm select-all" style="background-color: #011627; --theme-selection-background: #4373c2;"><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #999999;">// Inverting the &#39;production&#39; conditional</span></div><div class='line'><span style="color: #00BFF9;">if</span><span style="color: #BCE7FF;">(</span><span style="color: #F7ECB5;">getenv</span><span style="color: #BCE7FF;">(</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCF0C0;">PHPACKER_ENV</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCE7FF;">) </span><span style="color: #00BFF9;">!==</span><span style="color: #BCE7FF;"> </span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCF0C0;">production</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCE7FF;">)</span></div><div class='line'><span style="color: #BCE7FF;">    </span><span style="color: #999999;">//</span></div><div class='line'><span style="color: #BCE7FF;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #999999;">// Detect the SAPI (&#39;micro&#39; in builds)</span></div><div class='line'><span style="color: #00BFF9;">if</span><span style="color: #BCE7FF;">(</span><span style="color: #F7ECB5;">php_sapi_name</span><span style="color: #BCE7FF;">() </span><span style="color: #00BFF9;">===</span><span style="color: #BCE7FF;"> </span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCF0C0;">micro</span><span style="color: #6BFF81;">&#39;</span><span style="color: #BCE7FF;">)</span></div><div class='line'><span style="color: #BCE7FF;">    </span><span style="color: #999999;">//</span></div><div class='line'><span style="color: #BCE7FF;">}</span></div></code></pre>
 </div>
 </div>
         </main>
