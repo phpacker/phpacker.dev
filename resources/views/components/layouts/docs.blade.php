@@ -17,8 +17,10 @@
     </flux:header>
 
     <flux:main>
-        <main>
+        <main class="flex min-h-full flex-col">
             {{ $slot }}
+
+            <x-next-page />
         </main>
     </flux:main>
 </x-layouts.app>

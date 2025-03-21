@@ -24,14 +24,9 @@
     variant="outline"
     class="lg:gap-y-1"
 >
-    <flux:navlist.item href="/docs/installation">Installation</flux:navlist.item>
-    <flux:navlist.item href="/docs/getting-started">Getting Started</flux:navlist.item>
-    <flux:navlist.item href="/docs/configuration">Configuration</flux:navlist.item>
-    <flux:navlist.item href="/docs/custom-php-builds">Custom PHP Builds</flux:navlist.item>
-    <flux:navlist.item href="/docs/updating-php-binaries">Updating PHP Binaries</flux:navlist.item>
-    <flux:navlist.item href="/docs/app-considerations">App Considerations</flux:navlist.item>
-    <flux:navlist.item href="/docs/execution-context">Execution Context</flux:navlist.item>
-    <flux:navlist.item href="/docs/distribution">Distribution</flux:navlist.item>
+    @foreach (config('navigation') as $label => $href)
+        <flux:navlist.item :$href>{{ $label }}</flux:navlist.item>
+    @endforeach
 </flux:navlist>
 
 <flux:spacer />
