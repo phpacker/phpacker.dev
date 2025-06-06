@@ -162,7 +162,7 @@ phpacker build --src=./app.phar --php=8.3
                 static-php-cli
             </a>
             library. You can also use this tool to create custom PHP binaries with your preferred extensions. For more information, see the
-            <a href="//docs/custom-php-builds">Custom PHP Builds</a>
+            <a href="/docs/custom-php-builds">Custom PHP Builds</a>
             section.
         </p>
     </x-prose>
