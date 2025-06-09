@@ -110,7 +110,7 @@ define('APP_DATA', match (PHP_OS_FAMILY) {
                     laravel-zero
                 </a>
                 or
-                <a href="https://laravel-zero.com/">minicli</a>
+                <a href="https://docs.minicli.dev/">minicli</a>
             </li>
         </ul>
     </x-prose>
