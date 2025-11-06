@@ -22,11 +22,26 @@
 
 <flux:navlist
     variant="outline"
-    class="lg:gap-y-1"
+    class="lg:gap-y-1 h-full"
 >
     @foreach (config('navigation') as $label => $href)
-        <flux:navlist.item :$href>{{ $label }}</flux:navlist.item>
+        @if(! is_array($href))
+
+            <flux:navlist.item :$href>{{ $label }}</flux:navlist.item>
+
+        @else
+
+            <flux:navlist.group expandable :heading="$label" class="grid">
+                @foreach($href as $label => $subHref)
+                    <flux:navlist.item :href="$subHref">{{ $label }}</flux:navlist.item>
+                @endforeach
+            </flux:navlist.group>
+
+        @endif
     @endforeach
+
+    <flux:navlist.item href="/docs/upgrade-guide" class="mt-auto">Upgrade guide</flux:navlist.item>
+
 </flux:navlist>
 
 <flux:spacer />

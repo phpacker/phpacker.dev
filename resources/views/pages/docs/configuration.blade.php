@@ -35,12 +35,12 @@
         <!-- prettier-ignore -->
         <x-code language="json" >
 {
+    "php": "8.4",
+    "platform": "all",
+    "ini": "./phpacker.ini",
     "src": "./bin/app.phar",
     "dest": "./build",
-    "ini": "./phpacker.ini",
-    "platform": "all",
-    "php": "8.4",
-    "repository": "optional/custom-php-bin-repo"
+    "filename": "my-app",
 }
         </x-code>
 

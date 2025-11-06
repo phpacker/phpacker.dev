@@ -59,14 +59,14 @@
 
         <p>Use custom builds by specifying your repository:</p>
 
-        <x-code language="shell">phpacker build all --repository="your-org/php-bin"</x-code>
+        <x-code language="shell">phpacker build all --binary-src="your-org/php-bin"</x-code>
 
         <p>Or from a config file:</p>
 
         <!-- prettier-ignore -->
         <x-code language="json" >
 {
-  "repository": "your-org/php-bin"
+  "binary_src": "your-org/php-bin"
 }
         </x-code>
     </x-prose>

@@ -17,13 +17,13 @@
         <!-- prettier-ignore -->
         <x-code language="shell" >
 # Update official binaries
-phpacker download
+phpacker fetch
 
 # Update custom repository
-phpacker download "your-org/php-bin"
+phpacker fetch "your-org/php-bin"
 
 # Force redownload
-phpacker download "your-org/php-bin" --force
+phpacker fetch "your-org/php-bin" --force
         </x-code>
 
         <flux:heading

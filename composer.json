@@ -90,10 +90,6 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
-        "flux-pro": {
-            "type": "composer",
-            "url": "https://composer.fluxui.dev"
-        },
         "torchlight": {
             "type": "vcs",
             "url": "https://github.com/laravel-shift/torchlight-laravel.git"

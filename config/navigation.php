@@ -8,5 +8,9 @@ return [
     'Updating PHP Binaries' => '/docs/updating-php-binaries',
     'App Considerations' => '/docs/app-considerations',
     // 'Execution Context' => '/docs/execution-context',
-    'Distribution' => '/docs/distribution',
+    'Distribution' => [
+        'Publisher CLI' => '/',
+        'Self-update' => '/',
+        'Composer' => '/docs/distribution',
+    ]
 ];

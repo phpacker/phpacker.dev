@@ -41,6 +41,9 @@ phpacker build all --src=./app.phar
 # Build with custom output directory
 phpacker build --src=./app.phar --dest=./custom-build-path
 
+# Build with executable name (defaults to {platform}-{arch})
+phpacker build --src=./app.phar --filename=my-app
+
 # Build with a specific PHP configuration file
 phpacker build --src=./app.phar --ini=./custom-php.ini
 
@@ -49,6 +52,9 @@ phpacker build --src=./app.phar --ini
 
 # Build with with php version
 phpacker build --src=./app.phar --php=8.3
+
+# Build with custom PHP binaries
+phpacker build --src=./app.phar --binary-src=my-org/php-bin
         </x-code>
 
         <flux:heading
@@ -58,12 +64,14 @@ phpacker build --src=./app.phar --php=8.3
             Build Output
         </flux:heading>
 
-        <p>The default build process creates executables within the build directory with the following naming pattern:</p>
+        <p>The build process creates executables within the build directory with the following structure:</p>
 
         <!-- prettier-ignore -->
         <x-code language="text" >
-            {dest}/{platform}/{platform}-{architecture}[.exe]
+            {dest}/{platform}-{architecture}/{filename}[.exe]
         </x-code>
+
+        <p>Where <code>filename</code> defaults to <code>{platform}-{architecture}</code> if not specified with <code>--filename</code>.</p>
 
         <flux:heading
             size="lg"

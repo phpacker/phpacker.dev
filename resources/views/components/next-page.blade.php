@@ -4,7 +4,7 @@
     [$label, $href] = Support::getNextPage('/' . request()->path());
 @endphp
 
-@if ($href)
+@if (is_string($href))
     <div {{ $attributes->merge(['class' => 'mt-auto pt-10 max-w-3xl relative']) }}>
         <div class="flex justify-end">
             <a
