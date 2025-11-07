@@ -173,5 +173,12 @@ phpacker build --src=./app.phar --binary-src=my-org/php-bin
             <a href="/docs/custom-php-builds">Custom PHP Builds</a>
             section.
         </p>
+
+        <flux:callout icon="sparkles" color="purple" class="my-12">
+            <flux:callout.heading>Why Use a Configuration File?</flux:callout.heading>
+            <flux:callout.text>
+                We strongly recommend using a config file instead of passing options manually. It's required for advanced features like the <code>publisher</code> & <code>self-update</code> mechanisms, and allows you to version control your build configuration alongside your codebase.
+            </flux:callout.text>
+        </flux:callout>
     </x-prose>
 </x-layouts.docs>
