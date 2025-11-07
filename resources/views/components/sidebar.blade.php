@@ -24,23 +24,36 @@
     variant="outline"
     class="lg:gap-y-1 h-full"
 >
-    @foreach (config('navigation') as $label => $href)
-        @if(! is_array($href))
+    @foreach (config('navigation') as $label => $item)
 
-            <flux:navlist.item :$href>{{ $label }}</flux:navlist.item>
+        @if(array_key_exists('href', $item))
 
-        @else
+            <flux:navlist.item :href="$item['href']" @class([
+                'mt-auto' => $item['bottom'] ?? false
+            ])>
+                {{ $label }}
+            </flux:navlist.item>
+
+            @if($nested['new'] ?? false)
+                <flux:badge size="sm" color="green" class="ml-3 !py-0.5 !px-1.5">new</flux:badge>
+            @endif
+
+        @elseif(is_array($item))
 
             <flux:navlist.group expandable :heading="$label" class="grid">
-                @foreach($href as $label => $subHref)
-                    <flux:navlist.item :href="$subHref">{{ $label }}</flux:navlist.item>
+                @foreach($item as $label => $nested)
+                    <flux:navlist.item :href="$nested['href']">
+                        {{ $label }}
+
+                        @if($nested['new'] ?? false)
+                            <flux:badge size="sm" color="green" class="ml-3 !py-0.5 !px-1.5">new</flux:badge>
+                        @endif
+                    </flux:navlist.item>
                 @endforeach
             </flux:navlist.group>
 
         @endif
     @endforeach
-
-    <flux:navlist.item href="/docs/upgrade-guide" class="mt-auto">Upgrade guide</flux:navlist.item>
 
 </flux:navlist>
 

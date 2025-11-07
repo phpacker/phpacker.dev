@@ -7,15 +7,22 @@ class Support
     public static function getNextPage($currentUrl)
     {
         // Flatten the navigation structure to include nested submenu items
-        // This converts ['Distribution' => ['Publisher CLI' => '/', 'Self-update' => '/']]
-        // to ['Publisher CLI' => '/', 'Self-update' => '/'] while preserving top-level items
-        $pages = \collect(\config('navigation'))
+        // This converts ['Distribution' => ['Publisher CLI' => ['href' => '/'], 'Self-update' => ['href' => '/']]]
+        // to ['Publisher CLI' => ['href' => '/'], 'Self-update' => ['href' => '/']] while preserving top-level items
+        $pages = collect(config('navigation'))
             ->flatMap(function ($value, $key) {
-                return is_array($value) ? $value : [$key => $value];
+                // If it has an 'href' key, it's a page config
+                if (isset($value['href'])) {
+                    return [$key => $value];
+                }
+                // Otherwise, it's a nested menu, return its items
+                return $value;
             });
 
         // Find the key for the current URL in our flattened navigation
-        $currentKey = $pages->search($currentUrl);
+        $currentKey = $pages->search(function ($pageConfig) use ($currentUrl) {
+            return $pageConfig['href'] === $currentUrl;
+        });
 
         // If current URL is not found in navigation, return null
         if ($currentKey === false) {
@@ -36,9 +43,9 @@ class Support
 
         // Get the next page's key and URL
         $nextKey = $keys[$currentIndex + 1];
-        $nextValue = $values[$currentIndex + 1];
+        $nextPageConfig = $values[$currentIndex + 1];
 
         // Return array with [page title, page URL]
-        return [$nextKey, $nextValue];
+        return [$nextKey, $nextPageConfig['href']];
     }
 }
