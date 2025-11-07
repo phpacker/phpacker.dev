@@ -24,15 +24,15 @@ return [
     // ],
     'Distribution' => [
         'Publisher CLI' => [
-            'href' => '/',
+            'href' => '/docs/distribution/publisher',
             'new' => true
         ],
         'Self-update' => [
-            'href' => '/',
+            'href' => '/docs/distribution/updater',
             'new' => true
         ],
         'Composer'  => [
-            'href' => '/docs/distribution',
+            'href' => '/docs/distribution/composer',
         ],
     ],
     'Upgrade Guide' => [

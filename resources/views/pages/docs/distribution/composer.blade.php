@@ -3,14 +3,15 @@
         size="xl"
         level="1"
     >
-        Distribution
+        Composer
     </flux:heading>
 
     <flux:subheading
         size="lg"
         class="max-w-prose"
     >
-        There are multiple ways to distribute your binaries. While they are simply files, the most common distribution method in the PHP ecosystem is through Composer.
+        You may use Composer to install platform specific executables directly. Though this method is not recommended.
+        Having Composer installed implies that the user has PHP on their system, in which case installing the standalone executable makes less sense.
     </flux:subheading>
 
     <flux:separator
