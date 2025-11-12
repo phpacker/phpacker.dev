@@ -20,20 +20,35 @@
 
     <x-prose>
 
-        <h2>High Impact Changes</h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            High Impact Changes
+        </flux:heading>
 
         <ul class="list-disc">
             <li><a href="#output-directory-structure">Output Directory Structure</a></li>
             <li><a href="#command-renamed">Command Renamed: download → fetch</a></li>
         </ul>
 
-        <h2>Medium Impact Changes</h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            Medium Impact Changes
+        </flux:heading>
 
         <ul class="list-disc">
             <li><a href="#configuration-option-renamed">Configuration Option Renamed: repository → binary_src</a></li>
         </ul>
 
-        <h2>New Features</h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            New Features
+        </flux:heading>
 
         <flux:separator />
 
@@ -54,9 +69,9 @@
 
         <p>When no custom filename is provided, the default remains <code>{platform}-{arch}</code> (e.g., <code>linux-x64</code>, <code>mac-arm</code>).</p>
 
-        <h3 id="filename-option">Publisher CLI</h3>
+        <h3 id="publisher-cli">Publisher CLI</h3>
 
-        <p>We've added a addon lightweight publishing & self-update mechanism for PHPacker executables. Perfect for applications distributed via direct download (curl, file sharing, etc.) </p>
+        <p>We've added an addon lightweight publishing & self-update mechanism for PHPacker executables. Perfect for applications distributed via direct download (curl, file sharing, etc.)</p>
 
         <p>Simply install the publisher in your app:</p>
 
@@ -70,9 +85,9 @@
 
         <p>We're launching with GitHub Releases support and we encourage contributions to add additional drivers (S3, Spaces) <a href="/docs/distribution/publisher">[Docs]</a></p>
 
-        <h3 id="filename-option">Self-update mechanism</h3>
+        <h3 id="self-update-mechanism">Self-update mechanism</h3>
 
-        <p>The updater comes with a simpe API for checking, verifying & applying updates for you. You're free to implement this in your own <code>self-update</code> commands.<a href="/docs/distribution/updater">[Docs]</a></p>
+        <p>The updater comes with a simple API for checking, verifying & applying updates for you. You're free to implement this in your own <code>self-update</code> commands. <a href="/docs/distribution/updater">[Docs]</a></p>
 
         <x-code language="php">
 $updateManager = UpdateManager::make(__DIR__ . '/path/to/phpacker.json');
@@ -84,7 +99,12 @@ $updateManager->check();
 $updateManager->update();
         </x-code>
 
-        <h2>Breaking Changes</h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
+            Breaking Changes
+        </flux:heading>
 
         <flux:separator />
 
@@ -127,15 +147,13 @@ build/
     └── {filename}.exe
         </x-code>
 
-        <p>You should update any scripts or automation that references the old directory structure. Change paths from <code>build/{platform}/{platform}-{arch}</code> to <code>build/{platform}-{arch}/{filename}</code>.</p>
+        <p><strong>Migration required:</strong> Update any scripts or automation that reference the old directory structure. Change paths from <code>build/{platform}/{platform}-{arch}</code> to <code>build/{platform}-{arch}/{filename}</code>.</p>
 
         <h3 id="command-renamed" class="mb-6">
             <flux:badge size="sm" color="red">high</flux:badge> Command Renamed: `download` → `fetch`
         </h3>
 
         <p>The <code>phpacker download</code> command has been renamed to <code>phpacker fetch</code> for better consistency with CLI conventions.</p>
-
-        <p>The <code>fetch</code> command name:</p>
 
         <p><strong>Before:</strong></p>
 
@@ -169,13 +187,7 @@ phpacker fetch your-org/php-bin
 
         <p>The <code>repository</code> option in <code>phpacker.json</code> and corresponding command arguments has been renamed to <code>binary_src</code> for clarity.</p>
 
-        <p>The <code>binary_src</code> name:</p>
-
-        <ul class="list-disc">
-            <li>Removes ambiguity about what type of repository it references</li>
-            <li>Makes the purpose explicit in both config and CLI usage</li>
-            <li>Distinguishes it from your application's source repository</li>
-        </ul>
+        <p><strong>Why this change?</strong> The new name removes ambiguity about repository type and clearly distinguishes it from your application's source repository.</p>
 
         <p><strong>Before:</strong></p>
 

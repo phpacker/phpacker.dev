@@ -10,7 +10,7 @@
         size="lg"
         class="max-w-prose"
     >
-        When building an executable using PHPacker, there are some important considerations.
+        Key considerations when packaging your PHP application as a standalone executable.
     </flux:subheading>
 
     <flux:separator
@@ -27,7 +27,7 @@
         </flux:heading>
 
         <p>
-            If you're building from a single PHP script, all code must be contained within that file. External dependencies through require or use statements are not supported. If your application needs external dependencies, you should first package it as a PHAR archive using a tool like
+            Single PHP scripts cannot include external files or dependencies. If your application uses Composer packages or multiple files, first create a PHAR archive using tools like
             <a
                 href="https://github.com/box-project/box"
                 target="_blank"
@@ -35,7 +35,7 @@
             >
                 humbug/box
             </a>
-            .
+            before packaging with PHPacker.
         </p>
 
         <flux:heading
@@ -45,7 +45,7 @@
             File System Access
         </flux:heading>
 
-        <p>When your application is packaged (either from a single script or PHAR), it cannot write files within the application itself since everything is combined into a single executable. Instead, use the platform-specific application data directory for file storage. Here's a helper script to determine the correct path:</p>
+        <p>Packaged applications cannot modify their own files since everything is bundled into a single executable. Use platform-specific directories for data storage instead:</p>
 
         <!-- prettier-ignore -->
         <x-code language='php' >
@@ -110,7 +110,13 @@ define('APP_DATA', match (PHP_OS_FAMILY) {
                     laravel-zero
                 </a>
                 or
-                <a href="https://laravel-zero.com/">minicli</a>
+                <a
+                    href="https://minicli.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    minicli
+                </a>
             </li>
         </ul>
     </x-prose>

@@ -10,9 +10,9 @@
         size="lg"
         class="max-w-prose"
     >
-        All configuration options can be passed as command arguments. For a version-tracked way to do this, check out the
-        <a href="/docs/configuration">config</a>
-        section to track all options in a config file.
+        Start building executables with simple command-line arguments. For production workflows, we recommend using a 
+        <a href="/docs/configuration">configuration file</a>
+        to track build settings in version control.
     </flux:subheading>
 
     <flux:separator
@@ -28,7 +28,7 @@
             Basic Build Commands
         </flux:heading>
 
-        <p>When you don't provide any input you'll be prompted through setting the basics. You may also pass these as arguments to the build command.</p>
+        <p>When you run <code>phpacker build</code> without arguments, you'll be guided through an interactive setup. Alternatively, you can specify all options directly as command-line arguments.</p>
 
         <!-- prettier-ignore -->
         <x-code language="shell" >
@@ -72,6 +72,19 @@ phpacker build --src=./app.phar --binary-src=my-org/php-bin
         </x-code>
 
         <p>Where <code>filename</code> defaults to <code>{platform}-{architecture}</code> if not specified with <code>--filename</code>.</p>
+
+        <p><strong>Example output structure:</strong></p>
+
+        <!-- prettier-ignore -->
+        <x-code language="text" >
+build/
+├── linux-x64/
+│   └── my-app
+├── mac-arm/
+│   └── my-app  
+└── windows-x64/
+    └── my-app.exe
+        </x-code>
 
         <flux:heading
             size="lg"

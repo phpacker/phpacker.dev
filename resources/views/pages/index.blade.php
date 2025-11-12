@@ -121,8 +121,8 @@
                         </div>
 
                         <div>
-                            <h3 class="mb-2 font-semibold">Cross-Platform Support</h3>
-                            <p>Build executables for macOS, Linux, and Windows from a single codebase</p>
+                            <h3 class="mb-2 font-semibold">Cross-compilation</h3>
+                            <p>Build executables for macOS, Linux, and Windows from a single codebase on any OS</p>
                         </div>
                     </div>
 
@@ -133,8 +133,8 @@
                         </div>
 
                         <div>
-                            <h3 class="mb-2 font-semibold">Seamless distribution</h3>
-                            <p>Install the right build automatically for any platform with our Composer Installer</p>
+                            <h3 class="mb-2 font-semibold">Seamless Distribution</h3>
+                            <p>Automate releases to GitHub with built-in checksums and enable self-updates for your apps</p>
                         </div>
                     </div>
 
@@ -168,7 +168,7 @@
                         <div>
                         <x-svg.pitch.update class="text-brand size-6 sm:size-10" />
                         </div>
-                        
+
                         <div>
                         <h3 class="mb-2 font-semibold">Automated Updates</h3>
                         <p>Keep your PHP runtime binaries up-to-date with a simple command</p>
@@ -200,7 +200,7 @@
                 Made with
                 <x-svg.heart class="group-hover:text-brand mx-0.5 inline size-5" />
                 for the PHP community by
-                <strong class="group-hover:text-brand">Willem Leuverink</strong>
+                <strong class="group-hover:text-brand">Trailhead Labs</strong>
             </a>
         </div>
     </flux:main>

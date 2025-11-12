@@ -1,4 +1,4 @@
-<x-layouts.docs title="Installation - phpacker">
+<x-layouts.docs title="Publisher CLI - phpacker">
     <flux:heading
         size="xl"
         level="1"
@@ -10,7 +10,7 @@
         size="lg"
         class="max-w-prose"
     >
-        PHPacker provides a lightweight cli tool to push your executables to GitHub Releases.
+        Automate the distribution of your PHPacker executables through GitHub Releases with built-in checksums and platform-specific packaging.
     </flux:subheading>
 
     <flux:separator
@@ -19,24 +19,30 @@
     />
 
     <x-prose>
-        <h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
             Installation
-        </h2>
+        </flux:heading>
 
         <p>The Publisher is a separate package. You need to install it in your project:</p>
 
         <x-code language="shell">composer require phpacker/publisher</x-code>
 
         <flux:callout icon="exclamation-triangle" color="purple" class="my-12">
-            <flux:callout.heading>Right now we only suport the <code>github</code> provider</flux:callout.heading>
+            <flux:callout.heading>Right now we only support the <code>github</code> provider</flux:callout.heading>
             <flux:callout.text>
                 Using the GitHub provider you'll need to have a GITHUB_TOKEN in your <code>.env</code> file or passed along with the publisher command. The token must have `Contents` -> `Read and write` permissions for the repository you're publishing to.
             </flux:callout.text>
         </flux:callout>
 
-        <h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
             Configuration
-        </h2>
+        </flux:heading>
 
         <p>When using the updater it is required to use a `phpacker.json` file for configuring your builds. Please read more about the available configuration options <a href="/docs/configuration">here</a>.
 
@@ -56,22 +62,24 @@
 
 
 
-        <h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
             Publishing workflow
-        </h2>
+        </flux:heading>
 
-        <p>At minimum you have to follow these steps to publish a release:</p>
+        <p>Follow these steps to publish a release:</p>
 
         <ol class="list-decimal">
-            <li>Use a `phpacker.json` file to configure your your updater provider</li>
-            <li>Make sure you've bumped the current version in `phpacker.json`</li>
-            <li>Build your executables with PHPacker</li>
-            <li>Push your code, so the source is up to date with the published executables</li>
+            <li><strong>Configure:</strong> Use a <code>phpacker.json</code> file to configure your publisher provider</li>
+            <li><strong>Version bump:</strong> Update the version number in <code>phpacker.json</code></li>
+            <li><strong>Build:</strong> Create your executables with <code>phpacker build</code></li>
+            <li><strong>Commit:</strong> Push your code so the source matches the published executables</li>
+            <li><strong>Release:</strong> Run <code>./vendor/bin/phpacker-publisher release</code></li>
         </ol>
 
-        <p>Then run the cli-tool <code>./vendor/bin/phpacker-publisher release</code></p>
-
-        <p>It'll detect your config, create checksums and zip everything up before creating a draft release in GitHub. Make sure to publish the release when you're ready.</p>
+        <p>The publisher will automatically detect your configuration, generate SHA256 checksums, and create ZIP packages for each platform before creating a draft release in GitHub. Review and publish the release when ready.</p>
 
         <flux:callout icon="sparkles" color="purple" class="my-12">
             <flux:callout.heading>You can use a release-only repository</flux:callout.heading>

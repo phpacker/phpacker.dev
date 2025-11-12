@@ -19,9 +19,6 @@ return [
     'App Considerations' => [
         'href' => '/docs/app-considerations',
     ],
-    // 'Execution Context' => [
-    //     'href' => '/docs/execution-context',
-    // ],
     'Distribution' => [
         'Publisher CLI' => [
             'href' => '/docs/distribution/publisher',

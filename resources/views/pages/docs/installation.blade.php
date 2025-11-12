@@ -35,13 +35,22 @@
         <x-code language="shell">composer require phpacker/phpacker --dev</x-code>
 
         <flux:heading
+            size="md"
+            level="3"
+        >
+            Standalone Binary
+        </flux:heading>
+
+        <p>Pre-built executables are available for download from our <a href="https://github.com/phpacker/phpacker/releases" target="_blank" rel="noopener noreferrer">GitHub releases</a>.</p>
+
+        <flux:heading
             size="lg"
             level="2"
         >
             Quick Start
         </flux:heading>
 
-        <p>Build a executable from your PHP script with a single command:</p>
+        <p>Build an executable from your PHP script with a single command:</p>
 
         <x-code language="shell">phpacker build --src=./app.phar</x-code>
     </x-prose>

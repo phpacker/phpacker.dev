@@ -12,7 +12,7 @@
     />
 
     <x-prose>
-        <p>PHPacker automatically checks for binary updates during builds. Manual updates can be performed</p>
+        <p>PHPacker automatically checks for binary updates during builds. You can also manually update or manage the binary cache as needed:</p>
 
         <!-- prettier-ignore -->
         <x-code language="shell" >
@@ -33,7 +33,7 @@ phpacker fetch "your-org/php-bin" --force
             Binary Cache Management
         </flux:heading>
 
-        <p>PHPacker stores downloaded PHP binaries in a local cache to avoid repeated downloads. You can manage this cache with the following commands:</p>
+        <p>PHPacker stores downloaded PHP binaries in a local cache directory to avoid repeated downloads. This significantly speeds up subsequent builds. You can manage this cache with the following commands:</p>
 
         <!-- prettier-ignore -->
         <x-code language="shell" >
@@ -66,6 +66,6 @@ phpacker cache clear "your-org/php-bin"
             to build minimal, statically-linked, self-contained PHP executables for each platform.
         </p>
 
-        <p>They are automatically built weekly to get the latest versions of PHP near enough as soon as they become available.</p>
+        <p>Our binaries are automatically rebuilt weekly using GitHub Actions to include the latest PHP versions and security updates as soon as they become available.</p>
     </x-prose>
 </x-layouts.docs>

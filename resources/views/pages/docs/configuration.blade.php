@@ -1,4 +1,4 @@
-<x-layouts.docs title="Installation - phpacker">
+<x-layouts.docs title="Configuration - phpacker">
     <flux:heading
         size="xl"
         level="1"
@@ -10,7 +10,7 @@
         size="lg"
         class="max-w-prose"
     >
-        Using a config file you are able to predefine any argument or option otherwise passed to the build command. This way you can have all parameters for your project in a single version tracked file.
+        Use a configuration file to define build settings once and version control them with your project. This eliminates the need to remember complex command-line arguments and ensures consistent builds across different environments.
     </flux:subheading>
 
     <flux:separator
@@ -19,7 +19,7 @@
     />
 
     <x-prose>
-        <p>By using this method you'll be able to run the build command without providing any input:</p>
+        <p>With a configuration file in place, you can build your executables with a simple command:</p>
 
         <x-code language="shell">phpacker build</x-code>
 
@@ -41,8 +41,21 @@
     "src": "./bin/app.phar",
     "dest": "./build",
     "filename": "my-app",
+    "binary_src": "my-org/custom-php-bin"
 }
         </x-code>
+
+        <p><strong>Configuration options:</strong></p>
+
+        <ul class="list-disc">
+            <li><code>php</code> - PHP version (8.2, 8.3, 8.4)</li>
+            <li><code>platform</code> - Target platforms ("all", "linux", "mac", "windows")</li>
+            <li><code>ini</code> - Path to custom PHP ini file</li>
+            <li><code>src</code> - Path to your PHP script or PHAR file</li>
+            <li><code>dest</code> - Output directory for built executables</li>
+            <li><code>filename</code> - Custom name for the executable</li>
+            <li><code>binary_src</code> - Custom PHP binary repository</li>
+        </ul>
 
         <p>PHPacker will look for a config file in the following order:</p>
 

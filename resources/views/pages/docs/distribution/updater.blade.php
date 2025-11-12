@@ -1,4 +1,4 @@
-<x-layouts.docs title="Installation - phpacker">
+<x-layouts.docs title="Self-update mechanism - phpacker">
     <flux:heading
         size="xl"
         level="1"
@@ -10,7 +10,7 @@
         size="lg"
         class="max-w-prose"
     >
-        The updater comes with a simpe API for checking, verifying & applying updates for you.
+        The updater comes with a simple API for checking, verifying & applying updates for you.
     </flux:subheading>
 
     <flux:separator
@@ -19,17 +19,23 @@
     />
 
     <x-prose>
-        <h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
             Installation
-        </h2>
+        </flux:heading>
 
-        <p>The self-update mechanism is designed to work together with the <a href="docs/distribution/publishing">publisher cli</a>. You'll have to install the publisher packager & configure a provider to set things up.</p>
+        <p>The self-update mechanism is designed to work together with the <a href="/docs/distribution/publisher">publisher CLI</a>. You'll have to install the publisher package & configure a provider to set things up.</p>
 
-        <h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
             Implement the self-update command
-        </h2>
+        </flux:heading>
 
-        <p>We provide a very lightweight API for checking for & applying updates you can use when writing your own <code>self-update</code> command. In it's simplest form it it involves only these three steps:</p>
+        <p>The updater API provides three core methods for implementing self-updates in your application:</p>
 
         <x-code language="php">
 $updateManager = UpdateManager::make(__DIR__ . '/path/to/phpacker.json');
@@ -41,7 +47,7 @@ $updateManager->check();
 $updateManager->update();
         </x-code>
 
-        <p>You might have noticed we need to pass the <code>phpacker.json</code> file in the <code>UpdateManager</code> manually. This is because when you compile a phar archive, the config file will be encoded inside the executable itself. There is no way to detect it.</p>
+        <p><strong>Important:</strong> The <code>phpacker.json</code> path must be provided manually because it's embedded within the compiled executable and cannot be auto-detected.</p>
 
         <p>
             To include the <code>phpacker.json</code> file using
@@ -65,9 +71,12 @@ $updateManager->update();
         </x-code>
 
 
-        <h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
             Complete example
-        </h2>
+        </flux:heading>
 
         <p>Here's a basic example on how these can be applied using Laravel Prompts:</p>
 
@@ -101,13 +110,13 @@ protected function execute(InputInterface $input, OutputInterface $output): int
 }
         </x-code>
 
-        <p>Your app will exit immediately after the update succeeds. The process itself is still using the old version and it might error when performing operations after.</p>
+        <p><strong>Note:</strong> Your application will terminate immediately after a successful update since the running process uses the old version and cannot safely continue execution.</p>
 
         <h3>
-
+            Conditional Command Registration
         </h3>
 
-        <p>When you distribute your app on multiple channels, like Composer you might want to only register your `self-update` command when the app is running as a standalone executable. Here's how you can conditionally register a command using Symfony Console:</p>
+        <p>When distributing through multiple channels (Composer, standalone), only register the self-update command for compiled executables:</p>
 
         <x-code language="php">
 $application = new Application('phpacker', getVersion());
@@ -118,9 +127,12 @@ if (php_sapi_name() === 'micro') {
 }
         </x-code>
 
-        <h2>
+        <flux:heading
+            size="lg"
+            level="2"
+        >
             Error handling
-        </h2>
+        </flux:heading>
 
         <p>The <code>check()</code> and <code>update()</code> methods can throw specific exceptions that you should handle in your implementation. Here are the main exceptions to catch:</p>
 
@@ -132,28 +144,40 @@ use Symfony\Component\HttpClient\Exception\TimeoutException;
 use Symfony\Component\HttpClient\Exception\TransportException;
 
 try {
+
     $updateManager = UpdateManager::make(__DIR__ . '/../../phpacker.json');
     $updateData = $updateManager->check();
 
     if ($updateData->updateAvailable) {
         $updateManager->update();
     }
-} catch (ManagedByComposerException $e) {
+
+} catch (ManagedByComposerException $e) { // [tl! focus:start]
+
     // App is installed via Composer, self-update not allowed
     error('Cannot update: This application is managed by Composer');
+
 } catch (NoUpdateAvailableException $e) {
+
     // No update available when trying to force update
     info('You are already on the latest version');
+
 } catch (ChecksumException $e) {
+
     // Downloaded file failed checksum validation
     error('Update failed: File integrity check failed');
+
 } catch (TimeoutException|TransportException $e) {
+
     // Network or connection issues
     error('Update failed: Could not connect to update server');
+
 } catch (RuntimeException $e) {
+
     // General runtime errors (missing files, permissions, etc.)
     error('Update failed: ' . $e->getMessage());
-}
+
+} // [tl! focus:end]
         </x-code>
 
         <h3>Method exceptions</h3>
