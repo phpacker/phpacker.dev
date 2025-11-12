@@ -35,7 +35,7 @@
                 {{ $label }}
 
                 @if($item['new'] ?? false)
-                    <flux:badge size="sm" color="green" class="animate-pulse ml-3 absolute right-1.5 top-1 !py-0.5 !px-1.5">new</flux:badge>
+                    <flux:badge size="sm" color="green" class="animate-pulse ml-3 absolute right-1.5 top-[.3rem] !py-0.5 !px-1.5">new</flux:badge>
                 @endif
             </flux:navlist.item>
 
@@ -49,7 +49,7 @@
                         {{ $label }}
 
                         @if($nested['new'] ?? false)
-                            <flux:badge size="sm" color="green" class="animate-pulse ml-3 absolute right-1.5 top-1 !py-0.5 !px-1.5">new</flux:badge>
+                            <flux:badge size="sm" color="green" class="animate-pulse ml-3 absolute right-1.5 top-[.3rem] !py-0.5 !px-1.5">new</flux:badge>
                         @endif
                     </flux:navlist.item>
                 @endforeach

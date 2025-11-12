@@ -121,7 +121,6 @@ protected function execute(InputInterface $input, OutputInterface $output): int
         <x-code language="php">
 $application = new Application('phpacker', getVersion());
 
-// Compiled build only commands
 if (php_sapi_name() === 'micro') {
     $application->add(new SelfUpdate);
 }
@@ -182,21 +181,19 @@ try {
 
         <h3>Method exceptions</h3>
 
-        <h4><code>check()</code> method</h4>
+        {{-- <h4><code>check()</code> method</h4> --}}
 
         <x-code language="php">
 /**
  * @throws TimeoutException
  * @throws TransportException
  */
-public function check(): UpdateMeta
+public function check(): UpdateMeta;
         </x-code>
 
         <ul class="list-disc">
             <li><strong>TimeoutException/TransportException</strong>: Network-related errors when fetching release information from the provider.</li>
         </ul>
-
-        <h4><code>update()</code> method</h4>
 
         <x-code language="php">
 /**
@@ -207,7 +204,7 @@ public function check(): UpdateMeta
  * @throws NoUpdateAvailableException
  * @throws ManagedByComposerException
  */
-public function update()
+public function update(): void;
         </x-code>
 
         <ul class="list-disc">

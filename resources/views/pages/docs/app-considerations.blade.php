@@ -53,12 +53,12 @@ use Symfony\Component\Filesystem\Path;
 
 $appName = 'my-app';
 
-// Define APP_DATA constant
+// Define APP_DATA constant [tl! focus:start]
 define('APP_DATA', match (PHP_OS_FAMILY) {
     'Darwin' => Path::join(getenv('HOME'), 'Library', 'Application', 'Support', ".{$appName}"),
     'Windows' => Path::join(getenv('LOCALAPPDATA'), $appName),
     default => Path::join(getenv('HOME'), ".{$appName}"))
-});
+}); // [tl! focus:end]
         </x-code>
 
         <p>This ensures your application's data is stored in the appropriate location across different operating systems:</p>

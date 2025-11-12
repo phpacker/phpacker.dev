@@ -58,6 +58,7 @@
         "github_repo": "your-repo",
         "github_owner": "your-org"
     }
+}
         </x-code>
 
 
