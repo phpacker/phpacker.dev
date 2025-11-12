@@ -85,14 +85,15 @@
         </h3>
 
         <p>
-            A full build & publish scripts using
+            We recommend adding your build scripts in your <code>composer.json</code> file.
+            A full build & release scripts using
             <a
                 href="https://github.com/box-project/box"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 humbug/box
-            </a> to compile our phar might look something like this.
+            </a> to compile our phar might look something like this:
         </p>
 
         <x-code language="json">
@@ -114,6 +115,7 @@
 {
     "main": "bin/my-app",
     "output": "build/phpacker.phar",
+    "force-autodiscovery": true,
     "files": [
         "phpacker.json"
     ]

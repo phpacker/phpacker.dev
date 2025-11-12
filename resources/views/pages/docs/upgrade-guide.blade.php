@@ -68,11 +68,11 @@
             ./vendor/bin/phpacker-publisher release
         </x-code>
 
-        <p>We're launching with GitHub Releases support and we encourage contributions to add additional drivers (S3, Spaces) <a href="/docs/publisher">[Docs]</a></p>
+        <p>We're launching with GitHub Releases support and we encourage contributions to add additional drivers (S3, Spaces) <a href="/docs/distribution/publisher">[Docs]</a></p>
 
         <h3 id="filename-option">Self-update mechanism</h3>
 
-        <p>The updater comes with a simpe API for checking, verifying & applying updates for you. You're free to implement this in your own <code>self-update</code> commands.<a href="/docs/updater">[Docs]</a></p>
+        <p>The updater comes with a simpe API for checking, verifying & applying updates for you. You're free to implement this in your own <code>self-update</code> commands.<a href="/docs/distribution/updater">[Docs]</a></p>
 
         <x-code language="php">
 $updateManager = UpdateManager::make(__DIR__ . '/path/to/phpacker.json');

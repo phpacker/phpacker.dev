@@ -25,18 +25,18 @@ return [
     'Distribution' => [
         'Publisher CLI' => [
             'href' => '/docs/distribution/publisher',
-            'new' => true
+            'new' => true,
         ],
         'Self-update' => [
             'href' => '/docs/distribution/updater',
-            'new' => true
+            'new' => true,
         ],
-        'Composer'  => [
-            'href' => '/docs/distribution/composer',
-        ],
+        // 'Composer'  => [
+        //     'href' => '/docs/distribution/composer',
+        // ],
     ],
     'Upgrade Guide' => [
         'href' => '/docs/upgrade-guide',
-        'bottom' => true
-    ]
+        'bottom' => true,
+    ],
 ];
