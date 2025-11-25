@@ -58,7 +58,7 @@
         />
 
         <!-- Styles / Scripts -->
-        <link rel="preload" as="style" href="https://phpacker.dev/build/assets/app-B8TV6kmb.css" /><link rel="modulepreload" href="https://phpacker.dev/build/assets/app-CHsd9qxO.js" /><link rel="stylesheet" href="https://phpacker.dev/build/assets/app-B8TV6kmb.css" data-navigate-track="reload" /><script type="module" src="https://phpacker.dev/build/assets/app-CHsd9qxO.js" data-navigate-track="reload"></script>
+        <link rel="preload" as="style" href="https://phpacker.dev/build/assets/app-DLVEaywY.css" /><link rel="modulepreload" as="script" href="https://phpacker.dev/build/assets/app-CHsd9qxO.js" /><link rel="stylesheet" href="https://phpacker.dev/build/assets/app-DLVEaywY.css" data-navigate-track="reload" /><script type="module" src="https://phpacker.dev/build/assets/app-CHsd9qxO.js" data-navigate-track="reload"></script>
         <style>
     :root.dark {
         color-scheme: dark;
@@ -146,16 +146,18 @@
 </button>
         </div>
 
-        <div
-    class="z-10 fixed inset-0 bg-black/10 hidden [[data-show-stashed-sidebar]_&]:block lg:[[data-show-stashed-sidebar]_&]:hidden"
-    x-data x-on:click="document.body.removeAttribute('data-show-stashed-sidebar')"
-></div>
+        <ui-sidebar-toggle class="z-20 fixed inset-0 bg-black/10 hidden data-flux-sidebar-on-mobile:not-data-flux-sidebar-collapsed-mobile:block" data-flux-sidebar-backdrop></ui-sidebar-toggle>
 
-<div class="[grid-area:sidebar] z-1 flex flex-col gap-4 [:where(&amp;)]:w-64 p-4 max-lg:data-mobile-cloak:hidden [[data-show-stashed-sidebar]_&amp;]:translate-x-0! lg:translate-x-0! z-20! data-stashed:left-0! data-stashed:fixed! data-stashed:top-0! data-stashed:min-h-dvh! data-stashed:max-h-dvh! max-h-dvh overflow-y-auto overscroll-contain border-r border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900" x-bind:data-stashed="! screenLg" x-resize.document="screenLg = window.innerWidth &gt;= 1024" x-init="$el.classList.add(&#039;-translate-x-full&#039;); $el.removeAttribute(&#039;data-mobile-cloak&#039;); $el.classList.add(&#039;transition-transform&#039;)" x-bind:style="{ position: &#039;sticky&#039;, top: $el.offsetTop + &#039;px&#039;, &#039;max-height&#039;: &#039;calc(100dvh - &#039; + $el.offsetTop + &#039;px)&#039; }" x-data="{ screenLg: window.innerWidth >= 1024 }" data-mobile-cloak data-flux-sidebar>
+<ui-sidebar
+    class="[grid-area:sidebar] z-1 flex flex-col gap-4 [:where(&amp;)]:w-64 p-4 data-flux-sidebar-collapsed-desktop:w-14 data-flux-sidebar-collapsed-desktop:px-2 data-flux-sidebar-collapsed-desktop:cursor-e-resize rtl:data-flux-sidebar-collapsed-desktop:cursor-w-resize max-lg:data-flux-sidebar-cloak:hidden data-flux-sidebar-on-mobile:data-flux-sidebar-collapsed-mobile:-translate-x-full data-flux-sidebar-on-mobile:data-flux-sidebar-collapsed-mobile:rtl:translate-x-full z-20! data-flux-sidebar-on-mobile:start-0! data-flux-sidebar-on-mobile:fixed! data-flux-sidebar-on-mobile:top-0! data-flux-sidebar-on-mobile:min-h-dvh! data-flux-sidebar-on-mobile:max-h-dvh! max-h-dvh overflow-y-auto overscroll-contain border-r border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900" x-init="$el.classList.add(&#039;transition-transform&#039;)"
+     collapsible="mobile"      stashable      sticky     x-data
+    data-flux-sidebar-cloak
+    data-flux-sidebar
+>
     <div class="flex">
-    <a href="/" class="h-10 flex items-center mr-4 gap-2 !gap-1.5 px-2 tracking-wider uppercase" data-flux-brand>
-        <div class="size-6 rounded-sm overflow-hidden shrink-0">
-                            <svg
+    <a href="/" class="h-10 flex items-center me-4 gap-2 !gap-1.5 px-2 tracking-wider uppercase" data-flux-brand>
+                    <div class="flex items-center justify-center [:where(&amp;)]:h-6 [:where(&amp;)]:min-w-6 [:where(&amp;)]:rounded-sm overflow-hidden shrink-0">
+                <svg
     class="size-5.5"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="50 40 310 310"
@@ -166,14 +168,14 @@
         d="M233.2 44.596c-1.397.553-21.173 7.863-35.2 13.011-4.07 1.493-22.07 8.144-40 14.779-17.93 6.636-36.786 13.612-41.903 15.504-12.562 4.643-12.357 4.455-16.141 14.849-1.094 3.004-2.334 6.361-2.758 7.461-.423 1.1-4.388 11.9-8.811 24s-8.645 23.62-9.381 25.6c-.737 1.98-4.246 11.52-7.799 21.2-3.552 9.68-8.634 23.504-11.293 30.72-3.475 9.432-4.712 13.242-4.4 13.554.41.41 2.745-.4 25.686-8.9 1.65-.611 18.12-6.708 36.6-13.549 18.48-6.841 34.23-12.696 35-13.012.77-.316 8.778-3.29 17.795-6.61 18.743-6.9 17.772-6.42 18.742-9.252.405-1.183 2.507-7.011 4.671-12.951s6.451-17.73 9.528-26.2c3.076-8.47 8.143-22.42 11.259-31 3.116-8.58 7.383-20.28 9.482-26 2.099-5.72 3.959-10.85 4.134-11.4.174-.55 1.953-5.472 3.953-10.939 4.474-12.228 4.48-12.308.836-10.865m23.263 5.304c-.201.385-2.117 5.47-4.258 11.3-8.294 22.586-11.075 30.169-14.816 40.4-8.943 24.456-11.114 30.384-12.379 33.8-9.151 24.717-16.61 45.379-16.61 46.014 0 .839 99.419 100.586 100.255 100.586.714 0 1.15-.782 2.456-4.4.675-1.87 3.518-9.61 6.317-17.2 2.798-7.59 5.346-14.52 5.662-15.4.315-.88 2.165-5.92 4.11-11.2 1.946-5.28 6.35-17.25 9.786-26.6 3.437-9.35 6.59-17.9 7.006-19 .665-1.754 9.573-26.027 11.64-31.715 1.092-3.008 1.01-6.245-.222-8.706-1.042-2.082-97.071-98.579-98.1-98.579-.265 0-.646.315-.847.7M190.2 197.574c-1.1.412-3.98 1.493-6.4 2.402-2.42.909-6.02 2.249-8 2.976-4.589 1.686-19.504 7.267-30.6 11.449-4.73 1.782-10.04 3.768-11.8 4.412-1.76.644-5.18 1.912-7.6 2.817-2.42.905-6.02 2.244-8 2.975-1.98.731-5.58 2.071-8 2.978-8.897 3.333-12.082 4.518-15.734 5.85-2.054.749-3.901 1.465-4.104 1.591-.204.126-2.034.825-4.066 1.555-2.033.73-6.216 2.269-9.296 3.421-3.08 1.152-7.297 2.703-9.37 3.447-4.099 1.471-5.63 2.303-5.63 3.058 0 .856 93.997 94.649 96.522 96.313 4.101 2.702 6.481 2.556 16.078-.99 2.2-.813 5.44-1.993 7.2-2.623 1.76-.63 4.19-1.538 5.4-2.018 1.21-.481 3.91-1.492 6-2.248 7.604-2.749 20.389-7.434 26.6-9.745 2.42-.901 6.56-2.428 9.2-3.393 9.196-3.363 12.438-4.562 18.4-6.802 3.3-1.24 6.45-2.405 7-2.59.55-.185 3.07-1.096 5.6-2.024 2.53-.928 6.22-2.272 8.2-2.986 9.858-3.557 12.91-4.685 14.116-5.219.724-.32 2.434-.951 3.8-1.402 5.728-1.891 7.884-2.909 7.884-3.723 0-.623-98.351-98.975-99.68-99.681-1.334-.709-1.283-.711-3.72.2"
     />
 </svg>
-                    </div>
-
+            </div>
+        
         <div class="text-sm font-medium truncate [:where(&amp;)]:text-zinc-800 dark:[:where(&amp;)]:text-zinc-100">phpacker</div>
     </a>
 
     <div class="flex-1" data-flux-spacer></div>
 
-    <button type="button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-10 text-sm rounded-lg w-10 inline-flex  bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-400 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white     shrink-0 lg:hidden" data-flux-button="data-flux-button" x-data="" x-on:click="document.body.hasAttribute('data-show-stashed-sidebar') ? document.body.removeAttribute('data-show-stashed-sidebar') : document.body.setAttribute('data-show-stashed-sidebar', '')" data-flux-sidebar-toggle="data-flux-sidebar-toggle" aria-label="Toggle sidebar">
+    <button type="button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg w-10 inline-flex  bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white      shrink-0 lg:hidden" data-flux-button="data-flux-button" x-data="" x-on:click="$dispatch('flux-sidebar-toggle')" aria-label="Toggle sidebar" data-flux-sidebar-toggle="data-flux-sidebar-toggle">
         <svg class="shrink-0 [:where(&amp;)]:size-5" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
   <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/>
 </svg>
@@ -183,19 +185,19 @@
 <div >
     <div id="docsearch"></div>
 
-    <button class="w-full border rounded-lg block disabled:shadow-none dark:shadow-none appearance-none text-base sm:text-sm py-2 h-10 leading-[1.375rem] pl-10 pr-10 bg-zinc-800/5 dark:bg-white/10 dark:disabled:bg-white/[7%] text-zinc-700 placeholder-zinc-500 disabled:placeholder-zinc-400 dark:text-zinc-200 dark:placeholder-white/60 dark:disabled:placeholder-white/40 border-0  w-full relative flex" type="button" placeholder="Search..." x-on:click="document.querySelector('#docsearch .DocSearch-Button').click()">
-                    <div class="z-10 absolute top-0 bottom-0 flex items-center justify-center text-xs text-zinc-400/75 pl-3 left-0">
+    <button class="w-full border rounded-lg block disabled:shadow-none dark:shadow-none appearance-none text-base sm:text-sm py-2 h-10 leading-[1.375rem] ps-10 pe-10 bg-zinc-800/5 dark:bg-white/10 dark:disabled:bg-white/[7%] text-zinc-700 placeholder-zinc-500 disabled:placeholder-zinc-400 dark:text-zinc-200 dark:placeholder-white/60 dark:disabled:placeholder-white/40 border-0  w-full relative flex" type="button" placeholder="Search..." x-on:click="document.querySelector('#docsearch .DocSearch-Button').click()">
+                    <div class="absolute top-0 bottom-0 flex items-center justify-center text-xs text-zinc-400/75 ps-3 start-0">
                 <svg class="shrink-0 [:where(&amp;)]:size-5" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
   <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/>
 </svg>
 
                     </div>
         
-                    <div class="block self-center text-left flex-1 font-medium text-zinc-400 dark:text-white/40">
+                    <div class="block self-center text-start flex-1 font-medium text-zinc-400 dark:text-white/40">
                 Search...
             </div>
         
-                    <div class="absolute top-0 bottom-0 flex items-center justify-center text-xs text-zinc-400/75 pr-4 right-0">
+                    <div class="absolute top-0 bottom-0 flex items-center justify-center text-xs text-zinc-400/75 pe-4 end-0">
                 ⌘K
             </div>
         
@@ -203,25 +205,25 @@
 </div>
 
 <nav class="flex flex-col overflow-visible min-h-auto lg:gap-y-1" data-flux-navlist>
-    <a href="/docs/installation" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+    <a href="/docs/installation" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-start w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Installation</div>
     </a>
-            <a href="/docs/getting-started" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+            <a href="/docs/getting-started" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-start w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Getting Started</div>
     </a>
-            <a href="/docs/configuration" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+            <a href="/docs/configuration" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-start w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Configuration</div>
     </a>
-            <a href="/docs/custom-php-builds" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+            <a href="/docs/custom-php-builds" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-start w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Custom PHP Builds</div>
     </a>
-            <a href="/docs/updating-php-binaries" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+            <a href="/docs/updating-php-binaries" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-start w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Updating PHP Binaries</div>
     </a>
-            <a href="/docs/app-considerations" data-current="data-current" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+            <a href="/docs/app-considerations" data-current="data-current" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-start w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>App Considerations</div>
     </a>
-            <a href="/docs/distribution" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-left w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
+            <a href="/docs/distribution" class="h-10 lg:h-8 relative flex items-center gap-3 rounded-lg  py-0 text-start w-full px-3 my-px text-zinc-500 dark:text-white/80 data-current:text-(--color-accent-content) hover:data-current:text-(--color-accent-content) data-current:bg-white dark:data-current:bg-white/[7%] data-current:border data-current:border-zinc-200 dark:data-current:border-transparent hover:text-zinc-800 dark:hover:text-white dark:hover:bg-white/[7%] hover:bg-zinc-800/5  border border-transparent" data-flux-navlist-item="data-flux-navlist-item">
         <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>Distribution</div>
     </a>
 </nav>
@@ -229,7 +231,7 @@
 <div class="flex-1" data-flux-spacer></div>
 
 <div class="flex items-center">
-    <a href="https://github.com/phpacker/phpacker" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-8 text-sm rounded-md w-8 inline-flex  bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-400 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white" data-flux-button="data-flux-button" target="_blank">
+    <a href="https://github.com/phpacker/phpacker" data-flux-button="data-flux-button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-8 text-sm rounded-md w-8 inline-flex  bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white" target="_blank">
         <svg
     class="shrink-0 [:where(&amp;)]:size-5" data-flux-icon="data-flux-icon"
     viewBox="0 0 98 96"
@@ -244,7 +246,7 @@
 </svg>
     </a>
 
-    <a href="https://x.com/gwleuverink" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-8 text-sm rounded-md w-8 inline-flex  bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-400 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white" data-flux-button="data-flux-button" target="_blank">
+    <a href="https://x.com/gwleuverink" data-flux-button="data-flux-button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-8 text-sm rounded-md w-8 inline-flex  bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white" target="_blank">
         <svg
     class="shrink-0 [:where(&amp;)]:size-4" data-flux-icon="data-flux-icon"
     viewBox="0 0 1200 1227"
@@ -312,12 +314,11 @@
 </button>
     </div>
 </div>
-</div>
-
+</ui-sidebar>
 
     <header class="[grid-area:header] z-10 min-h-14 flex items-center px-6 lg:px-8 lg:hidden" data-flux-header>
             <div class="flex-1" data-flux-spacer></div>
-        <button type="button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-10 text-sm rounded-lg w-10 inline-flex -ml-2.5 bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-400 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white     shrink-0 lg:hidden" data-flux-button="data-flux-button" x-data="" x-on:click="document.body.hasAttribute('data-show-stashed-sidebar') ? document.body.removeAttribute('data-show-stashed-sidebar') : document.body.setAttribute('data-show-stashed-sidebar', '')" data-flux-sidebar-toggle="data-flux-sidebar-toggle" aria-label="Toggle sidebar">
+        <button type="button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg w-10 inline-flex -ms-2.5 bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white      shrink-0 lg:hidden" data-flux-button="data-flux-button" x-data="" x-on:click="$dispatch('flux-sidebar-toggle')" aria-label="Toggle sidebar" data-flux-sidebar-toggle="data-flux-sidebar-toggle">
         <svg class="shrink-0 [:where(&amp;)]:size-5" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
   <path fill-rule="evenodd" d="M2 6.75A.75.75 0 0 1 2.75 6h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 6.75Zm0 6.5a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>
 </svg>
@@ -326,17 +327,17 @@
 
     <div class="[grid-area:main] p-6 lg:p-8 [[data-flux-container]_&amp;]:px-0" data-flux-main>
     <main class="flex min-h-full flex-col">
-            <h1 class="font-medium text-zinc-800 dark:text-white text-2xl [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Prepping your CLI app</h1>
+            <h1 class="font-medium [:where(&amp;)]:text-zinc-800 [:where(&amp;)]:dark:text-white text-2xl [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Prepping your CLI app</h1>
 
         
-    <div class="text-base text-zinc-500 dark:text-white/70 max-w-prose" data-flux-subheading>
+    <div class="text-base [:where(&amp;)]:text-zinc-500 [:where(&amp;)]:dark:text-white/70 max-w-prose" data-flux-subheading>
     When building an executable using PHPacker, there are some important considerations.
 </div>
 
     <div data-orientation="horizontal" role="none" class="border-0 [print-color-adjust:exact] bg-zinc-800/5 dark:bg-white/10 h-px w-full my-6" data-flux-separator></div>
 
     <div class="prose-zinc prose-sm max-w-3xl prose-a:text-violet-600 dark:prose-a:text-violet-500 prose-code:bg-zinc-100 dark:prose-code:bg-zinc-700 prose-code:py-1 prose-code:px-1.5 prose-code:rounded-sm prose-code:inset-shadow-sm">
-    <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Single PHP Script Limitations</h2>
+    <h2 class="font-medium [:where(&amp;)]:text-zinc-800 [:where(&amp;)]:dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Single PHP Script Limitations</h2>
 
         
         <p>
@@ -351,7 +352,7 @@
             .
         </p>
 
-        <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>File System Access</h2>
+        <h2 class="font-medium [:where(&amp;)]:text-zinc-800 [:where(&amp;)]:dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>File System Access</h2>
 
         
         <p>When your application is packaged (either from a single script or PHAR), it cannot write files within the application itself since everything is combined into a single executable. Instead, use the platform-specific application data directory for file storage. Here's a helper script to determine the correct path:</p>
@@ -371,7 +372,7 @@
             <li>Linux: ~/.my-app</li>
         </ul>
 
-        <h2 class="font-medium text-zinc-800 dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Additional Application Considerations</h2>
+        <h2 class="font-medium [:where(&amp;)]:text-zinc-800 [:where(&amp;)]:dark:text-white text-base [&amp;:has(+[data-flux-subheading])]:mb-2 [[data-flux-subheading]+&amp;]:mt-2" data-flux-heading>Additional Application Considerations</h2>
 
         
         <ul class="list-disc">
@@ -408,7 +409,7 @@
                     laravel-zero
                 </a>
                 or
-                <a href="https://laravel-zero.com/">minicli</a>
+                <a href="https://docs.minicli.dev/">minicli</a>
             </li>
         </ul>
 </div>
@@ -436,6 +437,6 @@
         </main>
 </div>
 
-        <script src="/flux/flux.js?id=413d2599" data-navigate-once></script>
+        <script src="/flux/flux.js?id=b138f6c9" data-navigate-once></script>
     </body>
 </html>
