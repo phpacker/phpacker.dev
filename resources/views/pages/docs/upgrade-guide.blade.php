@@ -3,14 +3,14 @@
         size="xl"
         level="1"
     >
-        Upgrade to v1.0.0
+        Upgrade to v1
     </flux:heading>
 
     <flux:subheading
         size="lg"
         class="max-w-prose"
     >
-        PHPacker v1.0.0 introduces several breaking changes to improve usability and consistency. This guide will help you migrate from previous versions.
+        PHPacker v1 introduces several breaking changes to improve usability and consistency. This guide will help you migrate from previous versions.
     </flux:subheading>
 
     <flux:separator
