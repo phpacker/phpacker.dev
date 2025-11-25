@@ -168,7 +168,7 @@
                         <div>
                         <x-svg.pitch.update class="text-brand size-6 sm:size-10" />
                         </div>
-
+                        
                         <div>
                         <h3 class="mb-2 font-semibold">Automated Updates</h3>
                         <p>Keep your PHP runtime binaries up-to-date with a simple command</p>
