@@ -100,19 +100,19 @@ phpacker build --src=./app.phar --php=8.3
                 <tr>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">macOS</td>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">arm64, x64</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4, 8.5</td>
                 </tr>
 
                 <tr>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">Linux</td>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">arm64, x64</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4, 8.5</td>
                 </tr>
 
                 <tr>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">Windows</td>
                     <td class="px-3 py-4 text-sm whitespace-nowrap">x64</td>
-                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4</td>
+                    <td class="px-3 py-4 text-sm whitespace-nowrap">8.2, 8.3, 8.4, 8.5</td>
                 </tr>
             </tbody>
         </table>

@@ -39,7 +39,7 @@
     "dest": "./build",
     "ini": "./phpacker.ini",
     "platform": "all",
-    "php": "8.4",
+    "php": "8.5",
     "repository": "optional/custom-php-bin-repo"
 }
         </x-code>
