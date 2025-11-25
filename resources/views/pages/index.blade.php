@@ -158,7 +158,7 @@
 
                         <div>
                             <h3 class="mb-2 font-semibold">Multiple PHP Versions</h3>
-                            <p>Choose from PHP 8.2, 8.3, or 8.4 to match your application's requirements</p>
+                            <p>Choose from PHP 8.2, 8.3, 8.4 or 8.5 to match your application's requirements</p>
                         </div>
                     </div>
 

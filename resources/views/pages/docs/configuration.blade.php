@@ -35,7 +35,7 @@
         <!-- prettier-ignore -->
         <x-code language="json" >
 {
-    "php": "8.4",
+    "php": "8.5",
     "platform": "all",
     "ini": "./phpacker.ini",
     "src": "./bin/app.phar",
